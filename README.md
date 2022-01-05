@@ -1,8 +1,7 @@
-### Hi there, I'm Jesse - aka [codeSTACKr][website] 👋
+### Dungeon Crawler VS tutorial od [Hemisfera][website].
 
-[![Website](https://img.shields.io/website?label=codeSTACKr.com&style=for-the-badge&url=https%3A%2F%2Fcodestackr.com)](https://codestackr.com)
-[![Twitter Follow](https://img.shields.io/twitter/follow/codeSTACKr?color=1DA1F2&logo=twitter&style=for-the-badge)](https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fgithub.com%2FcodeSTACKr&screen_name=codeSTACKr)
-
+[![Website](https://img.shields.io/website?label=hemisfera.sk&style=for-the-badge&url=https%3A%2F%2Fhemisfera.sk)](https://hemisfera.sk)
+[<img align="left" alt="hemisfera.sk" width="22px" src="https://github.com/Zuvix/DungeonGame/blob/main/Images/logo.png?raw=true" />][website]
 ## I'm a Husband, Father, Developer, and Teacher!!
 
 - 🔭 I just launched my first course: [Become A VS Code SuperHero!][course]!
