@@ -1,4 +1,4 @@
-### Hi there, I'm Jesse - aka [codeSTACKr][website] 👋
+### Dungeon Crawler VS tutorial od [Hemisfera][website] 👋
 
 [![Website](https://img.shields.io/website?label=hemisfera.sk&style=for-the-badge&url=https%3A%2F%2Fhemisfera.sk)](https://hemisfera.sk)
 
