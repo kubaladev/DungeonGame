@@ -1,7 +1,7 @@
 ### Dungeon Crawler VS tutorial od [Hemisfera][website].
 
 [![Website](https://img.shields.io/website?label=hemisfera.sk&style=for-the-badge&url=https%3A%2F%2Fhemisfera.sk)](https://hemisfera.sk)
-
+[<img align="left" alt="hemisfera.sk" width="22px" src="https://github.com/Zuvix/DungeonGame/blob/main/Images/logo.png?raw=true" />][website]
 ## I'm a Husband, Father, Developer, and Teacher!!
 
 - 🔭 I just launched my first course: [Become A VS Code SuperHero!][course]!
