@@ -74,4 +74,14 @@ Teraz podobnú vec spravíme vo visual scripte. Pomocou príkazu **if** rozdelí
 ### Bonus 
 Základ pohybu už by sme mali, ale ak ho chceš vylepšit, tak ešte musíme opraviť jednu chybu. Keď sa postava hýbe diagonálnym smerom(napr. vľavo hore) tak sa hýbe rýchlejšie ako keď sa hýbe iba priamim smerom(vľavo, vpravo, hore, dole). Na to sa používa technika nazývaná [normalizácia vektora](https://www.youtube.com/watch?v=oCU8Ew1XTbs). Pointa je, že vektor zmenšíme, tak aby sme **zachovali jeho smer**, ale **zmenšili veľkosť vekotra na 1**. Vektor bude mať hodnotu 1 pre priamy pohyb, aj pre diagonálny pohyb. Potom ho jednoducho prenásobime rýchlosťou a chybu sme odstránili. Výsledny skript bude teda:
   
-<img src="https://github.com/Zuvix/DungeonGame/blob/main/Images/p4.png?raw=true" alt="Error" width="75%"/>
+<img src="https://github.com/Zuvix/DungeonGame/blob/main/Images/p4.PNG?raw=true" alt="Error" width="75%"/>
+
+## Kľúč <img align="right" alt="hemisfera.sk" width="32px" src="https://github.com/Zuvix/DungeonGame/blob/main/Images/key.png?raw=true" />
+Ako ďalší herný prvok si naprogramujeme kľúč. Jeho jedinou úlohou je pri dotyku s hráčom otvoriť príslušné dvere a uvoľniť hráčovi cestu. Pre začiatok si **otvoríme prefab kľúča** a pridáme **Script Machine** komponent podobne ako sme robili pri hráčovi.
+  
+<img src="https://github.com/Zuvix/DungeonGame/blob/main/Images/k0.gif?raw=true" alt="Error" width="75%"/>
+  
+Pre detekovanie dotyku kľuča s hráčom použijeme udalosť **On Trigger Enter 2D**. Takýto typ udalosti vzniká ak sa dotknú dva herné objekty, a aspoň jeden z nich ma **collider** typu **trigger**. Trigger vpodstate znamená, že cez herný objekt sa dá prechádzať a pri prechode sa aktivuje spomenutá udalosť. 
+
+<img src="https://github.com/Zuvix/DungeonGame/blob/main/Images/Trigger.PNG?raw=true" alt="Error" width="50%"/>
+ >**_Komponent Collider2D:_** Ak do hernej scény vložíme ľubovolný obrázok kameňa, slnka, hocičoho, nemôžeme čakať, že Unity bude samo od seba vedieť či ide o pevný objekt alebo len o grafiku, ktorá vypĺňa pozadie. Aby sme vedeli pevné objekty odlíšiť musíme objektu pridať *Collider2D*. Tento komponent vie mať rôzne tvary, ktoré nám pomáhaju približne ohraničiť herný objekt. Najčastejšie nám však stačí tvar krabice(Box collider2D), lebo je efektívny pre náš processor. V tomto projekte su collideri pridané za teba, však vo vlastnej hre si ich musíš popridávať sám. 
