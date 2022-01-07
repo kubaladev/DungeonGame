@@ -8,7 +8,7 @@ Aby si mohol začať programovat, tak potrebuješ mať stiahnuté unity, **verzi
   
 Ďalším krokom je stiahnuť si projekt z tejto github stránky. Takto nebudeš musiet nahadzovať grafiku, objekty do hernej scény a môžeš sa sústrediť na programovanie. V prípade, že máš grafiku vlastnú, tak **odporúčam ti aj tak si spraviť najprv všetko s touto grafikou** a potom na záver ju **vymeniť za vlasnú**.
   
-<img src="https://github.com/Zuvix/DungeonGame/blob/main/Images/0.gif?raw=true" alt="Error" width="75%"/>
+<img src="Images/0.gif?raw=true" alt="Error" width="75%"/>
   
 Keď máš projekt stiahnutí otvor si ho pomocou Unity Hubu. Ak máš nainštalovaných viacero verzii daj pozor aby si ju otvoril v tej 2021. 
   
