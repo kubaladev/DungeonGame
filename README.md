@@ -57,7 +57,7 @@ Dobrou praxou je si hodnotu 3 ktorou chceme prenásobiť rýchlosť hráča ulo�
   
 <img src="Images/p2.gif?raw=true" alt="Error" width="75%"/>
 
->**_Komponent RigidBody2D_** je spôsob akým vieme povedať nástroju Unity aby aplikoval fyzikálne pravidlá na daný herný objekt. My ho využívame iba na to aby sme mu priradili rýchlosť a pohli hráčom v danom smere pokiaľ nám neprekáža nejaký pevný objekt. V inom type hry by mohli byť užitočne aj iné vlastnosti *Rigidbody* komponentu ako gravitácia(napríklad pri platformer hre) alebo hmotnosť(pri zrážke dvoch rovnako rýchlych objektov odletí ďalej ten čo ma menšiu hmotnosť).
+>**_Component RigidBody2D_** je spôsob akým vieme povedať nástroju Unity aby aplikoval fyzikálne pravidlá na daný herný objekt. My ho využívame iba na to aby sme mu priradili rýchlosť a pohli hráčom v danom smere pokiaľ nám neprekáža nejaký pevný objekt. V inom type hry by mohli byť užitočne aj iné vlastnosti *Rigidbody* komponentu ako gravitácia(napríklad pri platformer hre) alebo hmotnosť(pri zrážke dvoch rovnako rýchlych objektov odletí ďalej ten čo ma menšiu hmotnosť).
   
 <img width="25%" src="Images/rigdbody.PNG?raw=true" />
   
@@ -74,7 +74,7 @@ Teraz podobnú vec spravíme vo visual scripte. Pomocou príkazu **if** rozdelí
 ### Bonus 
 Základ pohybu už by sme mali, ale ak ho chceš vylepšit, tak ešte musíme opraviť jednu chybu. Keď sa postava hýbe diagonálnym smerom(napr. vľavo hore) tak sa hýbe rýchlejšie ako keď sa hýbe iba priamim smerom(vľavo, vpravo, hore, dole). Na to sa používa technika nazývaná [normalizácia vektora](https://www.youtube.com/watch?v=oCU8Ew1XTbs). Pointa je, že vektor zmenšíme, tak aby sme **zachovali jeho smer**, ale **zmenšili veľkosť vekotra na 1**. Vektor bude mať hodnotu 1 pre priamy pohyb, aj pre diagonálny pohyb. Potom ho jednoducho prenásobime rýchlosťou a chybu sme odstránili. 
 
-### Výsledny skript bude teda:  
+### Výsledny skript:  
 <img src="Images/p4.PNG?raw=true" alt="Error" width="75%"/>
 
 ## Kľúč <img align="right" alt="hemisfera.sk" width="32px" src="https://github.com/Zuvix/DungeonGame/blob/main/Images/key.png?raw=true" />
@@ -86,7 +86,7 @@ Pre detekovanie dotyku kľuča s hráčom použijeme udalosť **On Trigger Enter
 
 <img src="Images/Trigger.PNG?raw=true" alt="Error" width="25%"/>
 
->**_Komponent Collider2D:_** Ak do hernej scény vložíme ľubovolný obrázok kameňa, slnka, hocičoho, nemôžeme čakať, že Unity bude samo od seba vedieť či ide o pevný objekt alebo len o grafiku, ktorá vypĺňa pozadie. Aby sme vedeli pevné objekty odlíšiť musíme objektu pridať *Collider2D*. Tento komponent vie mať rôzne tvary, ktoré nám pomáhaju približne ohraničiť herný objekt. Najčastejšie nám však stačí tvar krabice(BoxCollider2D), lebo je efektívny pre náš processor. V tomto projekte su collideri pridané za teba, však vo vlastnej hre si ich musíš popridávať sám. 
+>**_Component Collider2D:_** Ak do hernej scény vložíme ľubovolný obrázok kameňa, slnka, hocičoho, nemôžeme čakať, že Unity bude samo od seba vedieť či ide o pevný objekt alebo len o grafiku, ktorá vypĺňa pozadie. Aby sme vedeli pevné objekty odlíšiť musíme objektu pridať *Collider2D*. Tento komponent vie mať rôzne tvary, ktoré nám pomáhaju približne ohraničiť herný objekt. Najčastejšie nám však stačí tvar krabice(BoxCollider2D), lebo je efektívny pre náš processor. V tomto projekte su collideri pridané za teba, však vo vlastnej hre si ich musíš popridávať sám. 
     
 Udalosť **On Trigger Enter 2D** nám na výstupnom bode ponúka informáciu o tom, aký objekt narazil do kľuča. My sa chceme spýtať, či sa objekt, ktorý do nás narazil volá Player. Na identifikáciu sa v Unity nezvykne používať meno objektu, ale existuje niečo ako **tag**. Totiž dva objekty nemôžu mať rovnaké meno, môžu však byť označené jedným tágom. Ak by sme sa pozreli na hráčov objekt tak jeho tag vidíme tu:
 
@@ -96,5 +96,15 @@ Keď spojíme všetky tieto znalosti a doplníme ešte príkaz pre zničenie obj
   
 <img src="Images/k1.PNG?raw=true" alt="Error" width="75%"/>
   
-Teraz keď hráč narazí na kľuč, tak by sa mal zničiť. Druhá časť je zničenie dverí. Každým kľučom chceme ovoriť(zničiť) dvere do ktorých kľuč pasuje. Preto musíme vedieť priradiť herný objekt dverí. 
+Teraz keď hráč narazí na kľuč, tak by sa mal zničiť. Druhá časť je zničenie dverí. Každým kľučom chceme ovoriť(zničiť) dvere do ktorých kľuč pasuje. Preto musíme vedieť priradiť herný objekt dverí. Vieme to spraviť tak, že vytvoríme **Object Variable**. Je to rovnaká premenná ako sme použili na rýchlosť v hráčovi, akurát ju vieme nastavovať zvlášť pre každý objekt. 
 
+<img src="Images/k2.gif?raw=true" alt="Error" width="75%"/>
+  
+Priradenie dverí spravíme priamo v hernej scéne. Naštastie máme herné objekty dobre pomenované tak jednoducho každému kľúču priraď dvere s rovnakým číslom. Postup najdeš tu:
+  
+<img src="Images/k3.gif?raw=true" alt="Error" width="75%"/>
+  
+Správne priradenie si otestuj a ak si nikde nesparavil chybu tak kľuč máš hotoví!
+
+### Výsledny skript:  
+<img src="Images/k4.PNG?raw=true" alt="Error" width="75%"/>
