@@ -51,13 +51,16 @@ Dobrou praxou je si hodnotu 3 ktorou chceme prenásobiť rýchlosť hráča ulo�
 - **Boolean** predstavuje logické hodnoty *True* alebo *False*. 
 - **Iné:** Unity nám dovoľuje vytvárať premenné aj komplikovanejších typov ako napríklad *Vector3*, *GameObject*...
 
->**_Tip 2: Zrušenie prepojenia v grafe:_** ak chceš zrušiť prepojenie dvoch príkazov, tak jednoducho klikni pravým tlačidlom myšky na začiatok alebo koniec prepájacej čiary.
+>**_Tip 2: Zrušenie prepojenia v grafe:_** ak chceš **zrušiť prepojenie** dvoch príkazov, tak jednoducho klikni **pravým tlačidlom myšky** na začiatok alebo koniec prepájacej čiary.
 
 >**_Tip 3: Pomenovanie premenných:_** prográmatori sa dohodli, že herné premenné budú vždy nazývať malým písmenom. Ak ide o zloženie slov napríklad *playerLife*, tak prvé slovo je malým písmenom a každé ďaľšie slovo začína veľkým. Medzeri v názve nesmú byť!
   
 <img src="https://github.com/Zuvix/DungeonGame/blob/main/Images/p2.gif?raw=true" alt="Error" width="75%"/>
 
->**_Komponent RigidBody2D_** je spôsob akým vieme povedať nástroju Unity aby aplikoval fyzikálne pravidlá na daný herný objekt. My ho využívame iba na to aby sme mu priradili rýchlosť a pohli hráčom v danom smere pokiaľ nám neprekáža nejaký pevný objekt. V inom type hry by mohli byť užitočne aj iné vlastnosti *Rigidbody* komponentu ako napríklad gravitácia(napríklad pri platformer hre) alebo hmotnosť(pri zrážkach dvoch objektov).
+>**_Komponent RigidBody2D_** je spôsob akým vieme povedať nástroju Unity aby aplikoval fyzikálne pravidlá na daný herný objekt. My ho využívame iba na to aby sme mu priradili rýchlosť a pohli hráčom v danom smere pokiaľ nám neprekáža nejaký pevný objekt. V inom type hry by mohli byť užitočne aj iné vlastnosti *Rigidbody* komponentu ako gravitácia(napríklad pri platformer hre) alebo hmotnosť(pri zrážke dvoch rovnako rýchlych objektov odletí ďalej ten čo ma menšiu hmotnosť).
   
-<img align="right" width="80%" src="https://github.com/Zuvix/DungeonGame/blob/main/Images/rigdbody.png?raw=true" />
+<img width="25%" src="https://github.com/Zuvix/DungeonGame/blob/main/Images/rigdbody.PNG?raw=true" />
   
+Rýchlosť hráča máme vyriešenú, pokiaľ chceš možeš mu pridať alebo ubrať z hodnoty 3. Ešte takým vizuálnym vylepšením by bolo otočiť obrázok hráča do smeru v ktoróm sa pohybuje. Najlepší spôsob riešenia je použitím komponentu **Sprite Renderer**. A to pomocou premennej **Flip X**. Ak hodnotu premennej označíš v editore ako pravdivú, hráč sa bude pozerať opačným smerom.
+  
+<img width="25%" src="https://github.com/Zuvix/DungeonGame/blob/main/Images/sprite.PNG?raw=true" />
