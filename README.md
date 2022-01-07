@@ -26,7 +26,7 @@ Pridajme hráčovi nový komponent typu Script machine, nazvime ho Player a ulo�
 <img src="https://github.com/Zuvix/DungeonGame/blob/main/Images/1.gif?raw=true" alt="Error" width="75%"/>
   
 **Otvorme si graf** vo Visual Scripting editore a hurá! Môžeme sa pustiť do kódenia.
- >**_Tip 1: Zoom:_** Pomocou dvojkliku vo visual editor zóne si vieš zväčšiť alebo zmenšiť okno v ktoróm sa tvorí vizuálny skript. Pomôže ti to ak budeš tvoriť rozsiahlé skripty.
+ >**_Tip 1: Zoom:_** Pomocou dvojkliku vo visual editor zóne si vieš zväčšiť alebo zmenšiť okno v ktorom sa tvorí vizuálny skript. Pomôže ti to ak budeš tvoriť rozsiahlé skripty.
 
 <img src="https://github.com/Zuvix/DungeonGame/blob/main/Images/2.gif?raw=true" alt="Error" width="75%"/>
 
