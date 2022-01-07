@@ -7,8 +7,14 @@ Ak sa zasekneš alebo si nebudeš v niektorej časti istý, tak neváhaj spýta�
 Aby si mohol začať programovat, tak potrebuješ mať stiahnuté unity, **verziu 2021** alebo novšiu. Ak ešte nemáš tak urob tak na [tomto linku](https://unity.com/download). Ak máš s inštaláciou problémy, tak skús si pozrieť [toto video](https://www.youtube.com/watch?v=9IKSJdNqzWg).
   
 Ďalším krokom je stiahnuť si projekt z tejto github stránky. Takto nebudeš musiet nahadzovať grafiku, objekty do hernej scény a môžeš sa sústrediť na programovanie. V prípade, že máš grafiku vlastnú, tak **odporúčam ti aj tak si spraviť najprv všetko s touto grafikou** a potom na záver ju **vymeniť za vlasnú**.
-
-![Alt Text](https://github.com/Zuvix/DungeonGame/blob/main/Images/1.gif?raw=true)
+![Error](https://github.com/Zuvix/DungeonGame/blob/main/Images/0.gif?raw=true)
+  
+Keď máš projekt stiahnutí otvor si ho pomocou Unity Hubu. Ak máš nainštalovaných viacero verzii daj pozor aby si ju otvoril v tej 2021. 
+  
+![Error](https://github.com/Zuvix/DungeonGame/blob/main/Images/01.gif?raw=true)
+  
+Posledný krok je otvoriť si scénu **Level1**. 
+![Error](https://github.com/Zuvix/DungeonGame/blob/main/Images/02.gif?raw=true)
 
 ## Úvod
 asdsadasdasdasd
