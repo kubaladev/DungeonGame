@@ -46,6 +46,13 @@ Dobrou praxou je si hodnotu 3 ktorou chceme prenásobiť rýchlosť hráča ulo�
 
  >**_Tip 2: Zrušenie prepojenia v grafe:_** ak chceš zrušiť prepojenie dvoch príkazov, tak jednoducho klikni pravým tlačidlom myšky na začiatok alebo koniec prepájacej čiary.
 
->**_Tip 3: Herné premenné:_** prográmatori sa dohodli, že herné premenné budú vždy nazývať malým písmenom. Ak ide o zloženie slov napríklad *playerLife*, tak prvé slovo je veľkým písmenom a každé ďaľšie slovo začína veľkým. Medzeri v názve nesmú byť!
-
-
+>**_Tip 3: Herné premenné:_** prográmatori sa dohodli, že herné premenné budú vždy nazývať malým písmenom. Ak ide o zloženie slov napríklad *playerLife*, tak prvé slovo je malým písmenom a každé ďaľšie slovo začína veľkým. Medzeri v názve nesmú byť!
+  
+<img src="https://github.com/Zuvix/DungeonGame/blob/main/Images/p2.gif?raw=true" alt="Error" width="75%"/>
+  
+**Typy premenných:**
+- **Float** predstavuje desatinné čísla naprílad: 0.5, -0.123, 1669, ...
+- **Integer** predstavuje celé čísla: -1, 0, 1, 2, 3...
+- **String** predstavuje textové reťazce: "Hello, World!", "Flying type", "Walking type" ...
+- **Boolean** predstavuje logické hodnoty *True* alebo *False*. 
+- **Iné** Unity nám dovoľuje vytvárať premenné aj komplikovanejších typov ako napríklad *Vector3*, *GameObject*...
