@@ -1,4 +1,4 @@
-# Dungeon Crawler VS tutorial od [Hemisfera](https://www.hemisfera.sk). <img align="right" alt="hemisfera.sk" width="128px" src="https://github.com/Zuvix/DungeonGame/blob/main/Images/logo.png?raw=true" />
+# Dungeon Crawler VS tutorial od [Hemisfera](https://www.hemisfera.sk). [<img align="right" alt="hemisfera.sk" width="128px" src="https://github.com/Zuvix/DungeonGame/blob/main/Images/logo.png?raw=true" />](https://www.hemisfera.sk)
   
 Tento návod ti pomôže vytvoriť vlastnú 2D hru žánru [Dungeon Crawler](https://www.youtube.com/watch?v=FQed13kgHSE). Hráč ovláda hrdinu, ktorý sa ocitol v mysterióznej jaskyni plnej nástrah a nepriatelov. Naprogramuj ho tak, aby sa mu podarilo z jaskyne dostať a zároveň, aby to pre teba ako hráča bola výzva.
   
@@ -65,8 +65,13 @@ Rýchlosť hráča máme vyriešenú, pokiaľ chceš možeš mu pridať alebo ub
   
 <img width="25%" src="https://github.com/Zuvix/DungeonGame/blob/main/Images/sprite.PNG?raw=true" />
   
-Teraz podobnú vec spravíme vo visual scripte. Pomocou príkazu **if** rozdelíme hlavný tok programu na vetvu v ktorej hráč kráča smmerom vľavo a vetvu v ktorej kráča vpravo. Aby program vedel podľa čoho si má vetvu vybrať tak porovnáme veľkosť **X súracnice** s hodnotou 0. **Výsledok porovnania** potom vložíme ako vstup do príkazu **if**.
+Teraz podobnú vec spravíme vo visual scripte. Pomocou príkazu **if** rozdelíme hlavný tok programu na vetvu v ktorej hráč kráča smmerom vľavo a vetvu v ktorej kráča vpravo. Aby program vedel podľa čoho si má vetvu vybrať tak porovnáme veľkosť **X súracnice** s hodnotou 0(porovnávanie vieme spraviť príkazom *less* alebo *greater*. **Výsledok porovnania** potom vložíme ako vstup do príkazu **if**.
   
 <img src="https://github.com/Zuvix/DungeonGame/blob/main/Images/p3.gif?raw=true" alt="Error" width="75%"/>
 
 >**_Tip 4: Kopírovanie príkazov:_** najľahší spôsob ako kopírovať je pomocou **označenia príkazu na kopírovanie** a klávesovej skratky **Ctrl + D**.
+
+### Bonus 
+Základ pohybu už by sme mali, ale ak ho chceš vylepšit, tak ešte musíme opraviť jednu chybu. Keď sa postava hýbe diagonálnym smerom(napr. vľavo hore) tak sa hýbe rýchlejšie ako keď sa hýbe iba priamim smerom(vľavo, vpravo, hore, dole). Na to sa používa technika nazývaná [normalizácia vektora](https://www.youtube.com/watch?v=oCU8Ew1XTbs). Pointa je, že vektor zmenšíme, tak aby sme **zachovali jeho smer**, ale **zmenšili veľkosť vekotra na 1**. Vektor bude mať hodnotu 1 pre priamy pohyb, aj pre diagonálny pohyb. Potom ho jednoducho prenásobime rýchlosťou a chybu sme odstránili. Výsledny skript bude teda:
+  
+<img src="https://github.com/Zuvix/DungeonGame/blob/main/Images/p4.png?raw=true" alt="Error" width="75%"/>
