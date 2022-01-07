@@ -65,6 +65,6 @@ Rýchlosť hráča máme vyriešenú, pokiaľ chceš možeš mu pridať alebo ub
   
 <img width="25%" src="https://github.com/Zuvix/DungeonGame/blob/main/Images/sprite.PNG?raw=true" />
   
-Teraz podobnú vec spravíme vo visual scripte. Pomocou príkazu **If** rozdelíme hlavný tok programu na vetvu v ktorej hráč kráča smmerom vľavo a vetvu v ktorej kráča vpravo. Aby program vedel podľa čoho si má vetvu vybrať tak porovnáme veľkosť **X súracnice** s hodnotou 0.
+Teraz podobnú vec spravíme vo visual scripte. Pomocou príkazu **if** rozdelíme hlavný tok programu na vetvu v ktorej hráč kráča smmerom vľavo a vetvu v ktorej kráča vpravo. Aby program vedel podľa čoho si má vetvu vybrať tak porovnáme veľkosť **X súracnice** s hodnotou 0. **Výsledok porovnania** potom vložíme ako vstup do príkazu **if**.
   
 <img src="https://github.com/Zuvix/DungeonGame/blob/main/Images/p3.gif?raw=true" alt="Error" width="75%"/>
