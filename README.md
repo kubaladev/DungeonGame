@@ -49,7 +49,7 @@ Dobrou praxou je si hodnotu 3 ktorou chceme prenásobiť rýchlosť hráča ulo�
 - **Integer** predstavuje celé čísla: -1, 0, 1, 2, 3...
 - **String** predstavuje textové reťazce: "Hello, World!", "Flying type", "Walking type" ...
 - **Boolean** predstavuje logické hodnoty *True* alebo *False*. 
-- **Iné** Unity nám dovoľuje vytvárať premenné aj komplikovanejších typov ako napríklad *Vector3*, *GameObject*...
+- **Iné:** Unity nám dovoľuje vytvárať premenné aj komplikovanejších typov ako napríklad *Vector3*, *GameObject*...
 
 >**_Tip 2: Zrušenie prepojenia v grafe:_** ak chceš zrušiť prepojenie dvoch príkazov, tak jednoducho klikni pravým tlačidlom myšky na začiatok alebo koniec prepájacej čiary.
 
@@ -58,4 +58,6 @@ Dobrou praxou je si hodnotu 3 ktorou chceme prenásobiť rýchlosť hráča ulo�
 <img src="https://github.com/Zuvix/DungeonGame/blob/main/Images/p2.gif?raw=true" alt="Error" width="75%"/>
 
 >**_Komponent RigidBody2D_** je spôsob akým vieme povedať nástroju Unity aby aplikoval fyzikálne pravidlá na daný herný objekt. My ho využívame iba na to aby sme mu priradili rýchlosť a pohli hráčom v danom smere pokiaľ nám neprekáža nejaký pevný objekt. V inom type hry by mohli byť užitočne aj iné vlastnosti *Rigidbody* komponentu ako napríklad gravitácia(napríklad pri platformer hre) alebo hmotnosť(pri zrážkach dvoch objektov).
+  
+<img align="right" width="80%" src="https://github.com/Zuvix/DungeonGame/blob/main/Images/rigdbody.png?raw=true" />
   
