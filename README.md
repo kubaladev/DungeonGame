@@ -69,4 +69,4 @@ Teraz podobnú vec spravíme vo visual scripte. Pomocou príkazu **if** rozdelí
   
 <img src="https://github.com/Zuvix/DungeonGame/blob/main/Images/p3.gif?raw=true" alt="Error" width="75%"/>
 
->**_Tip 4: Kopírovanie príkazov:_** najľahší spôsob ako kopírovať príkaz je pomocou **označenia príkazu na kopírovanie** a klávesovej skratky **Ctrl + D**.
+>**_Tip 4: Kopírovanie príkazov:_** najľahší spôsob ako kopírovať je pomocou **označenia príkazu na kopírovanie** a klávesovej skratky **Ctrl + D**.
