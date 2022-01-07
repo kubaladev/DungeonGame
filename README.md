@@ -68,3 +68,5 @@ Rýchlosť hráča máme vyriešenú, pokiaľ chceš možeš mu pridať alebo ub
 Teraz podobnú vec spravíme vo visual scripte. Pomocou príkazu **if** rozdelíme hlavný tok programu na vetvu v ktorej hráč kráča smmerom vľavo a vetvu v ktorej kráča vpravo. Aby program vedel podľa čoho si má vetvu vybrať tak porovnáme veľkosť **X súracnice** s hodnotou 0. **Výsledok porovnania** potom vložíme ako vstup do príkazu **if**.
   
 <img src="https://github.com/Zuvix/DungeonGame/blob/main/Images/p3.gif?raw=true" alt="Error" width="75%"/>
+
+>**_Tip 4: Kopírovanie príkazov:_** najľahší spôsob ako kopírovať príkaz je pomocou **označenia príkazu na kopírovanie** a klávesovej skratky **Ctrl + D**.
