@@ -43,12 +43,6 @@ Výsledok príkazov si uložíme do nového **Vectoru3**(alebo Vectoru2, aj ten 
 Teraz keby si zavrel visual scripting okno a vrátil sa do hernej scény, môžeš hru pustiť. Všimni si, že hráč sa vie hýbať do všetkých smerov, akurat sa hýbe príšerne pomaly. Rýchlosť pohybu závisi od veľkosti vektora, ktorý posunieme do komponentu **RigidBody2D** *Set Velocity*. My mu teraz posúvame hodnoty -1, 1 poďla toho aké klávesy su stlačené. Prenásobme tieto hodnoty napríklad číslom 3 a uvidíme podstatné zrýchlenie. 
   
 Dobrou praxou je si hodnotu 3 ktorou chceme prenásobiť rýchlosť hráča uložiť do **hernej premennej**, ktorú nazveme napríklad **speed**. Ak by niekto pozeral náš skript tak bude lepšie rozumieť slovu speed ako náhodnemu číslu 3. 
-
- >**_Tip 2: Zrušenie prepojenia v grafe:_** ak chceš zrušiť prepojenie dvoch príkazov, tak jednoducho klikni pravým tlačidlom myšky na začiatok alebo koniec prepájacej čiary.
-
->**_Tip 3: Herné premenné:_** prográmatori sa dohodli, že herné premenné budú vždy nazývať malým písmenom. Ak ide o zloženie slov napríklad *playerLife*, tak prvé slovo je malým písmenom a každé ďaľšie slovo začína veľkým. Medzeri v názve nesmú byť!
-  
-<img src="https://github.com/Zuvix/DungeonGame/blob/main/Images/p2.gif?raw=true" alt="Error" width="75%"/>
   
 **Typy premenných:**
 - **Float** predstavuje desatinné čísla naprílad: 0.5, -0.123, 1669, ...
@@ -56,3 +50,12 @@ Dobrou praxou je si hodnotu 3 ktorou chceme prenásobiť rýchlosť hráča ulo�
 - **String** predstavuje textové reťazce: "Hello, World!", "Flying type", "Walking type" ...
 - **Boolean** predstavuje logické hodnoty *True* alebo *False*. 
 - **Iné** Unity nám dovoľuje vytvárať premenné aj komplikovanejších typov ako napríklad *Vector3*, *GameObject*...
+
+>**_Tip 2: Zrušenie prepojenia v grafe:_** ak chceš zrušiť prepojenie dvoch príkazov, tak jednoducho klikni pravým tlačidlom myšky na začiatok alebo koniec prepájacej čiary.
+
+>**_Tip 3: Pomenovanie premenných:_** prográmatori sa dohodli, že herné premenné budú vždy nazývať malým písmenom. Ak ide o zloženie slov napríklad *playerLife*, tak prvé slovo je malým písmenom a každé ďaľšie slovo začína veľkým. Medzeri v názve nesmú byť!
+  
+<img src="https://github.com/Zuvix/DungeonGame/blob/main/Images/p2.gif?raw=true" alt="Error" width="75%"/>
+
+>**_Komponent RigidBody2D_** je spôsob akým vieme povedať nástroju Unity aby aplikoval fyzikálne pravidlá na daný herný objekt. My ho využívame iba na to aby sme mu priradili rýchlosť a pohli hráčom v danom smere pokiaľ nám neprekáža nejaký pevný objekt. V inom type hry by mohli byť užitočne aj iné vlastnosti *Rigidbody* komponentu ako napríklad gravitácia(napríklad pri platformer hre) alebo hmotnosť(pri zrážkach dvoch objektov).
+  
