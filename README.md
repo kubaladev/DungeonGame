@@ -1,4 +1,4 @@
-# Dungeon Crawler VS tutorial od [Hemisfera](https://www.hemisfera.sk). [<img align="right" alt="hemisfera.sk" width="128px" src="https://github.com/Zuvix/DungeonGame/blob/main/Images/logo.png?raw=true" />](https://www.hemisfera.sk)
+# Dungeon Crawler VS tutorial od [Hemisfera](https://www.hemisfera.sk). [<img align="right" alt="hemisfera.sk" width="128px" src="Images/logo.png?raw=true" />](https://www.hemisfera.sk)
   
 Tento návod ti pomôže vytvoriť vlastnú 2D hru žánru [Dungeon Crawler](https://www.youtube.com/watch?v=FQed13kgHSE). Hráč ovláda hrdinu, ktorý sa ocitol v mysterióznej jaskyni plnej nástrah a nepriatelov. Naprogramuj ho tak, aby sa mu podarilo z jaskyne dostať a zároveň, aby to pre teba ako hráča bola výzva.
   
@@ -72,8 +72,9 @@ Teraz podobnú vec spravíme vo visual scripte. Pomocou príkazu **if** rozdelí
 >**_Tip 4: Kopírovanie príkazov:_** najľahší spôsob ako kopírovať je pomocou **označenia príkazu na kopírovanie** a klávesovej skratky **Ctrl + D**.
 
 ### Bonus 
-Základ pohybu už by sme mali, ale ak ho chceš vylepšit, tak ešte musíme opraviť jednu chybu. Keď sa postava hýbe diagonálnym smerom(napr. vľavo hore) tak sa hýbe rýchlejšie ako keď sa hýbe iba priamim smerom(vľavo, vpravo, hore, dole). Na to sa používa technika nazývaná [normalizácia vektora](https://www.youtube.com/watch?v=oCU8Ew1XTbs). Pointa je, že vektor zmenšíme, tak aby sme **zachovali jeho smer**, ale **zmenšili veľkosť vekotra na 1**. Vektor bude mať hodnotu 1 pre priamy pohyb, aj pre diagonálny pohyb. Potom ho jednoducho prenásobime rýchlosťou a chybu sme odstránili. Výsledny skript bude teda:
-  
+Základ pohybu už by sme mali, ale ak ho chceš vylepšit, tak ešte musíme opraviť jednu chybu. Keď sa postava hýbe diagonálnym smerom(napr. vľavo hore) tak sa hýbe rýchlejšie ako keď sa hýbe iba priamim smerom(vľavo, vpravo, hore, dole). Na to sa používa technika nazývaná [normalizácia vektora](https://www.youtube.com/watch?v=oCU8Ew1XTbs). Pointa je, že vektor zmenšíme, tak aby sme **zachovali jeho smer**, ale **zmenšili veľkosť vekotra na 1**. Vektor bude mať hodnotu 1 pre priamy pohyb, aj pre diagonálny pohyb. Potom ho jednoducho prenásobime rýchlosťou a chybu sme odstránili. 
+
+### Výsledny skript bude teda:  
 <img src="https://github.com/Zuvix/DungeonGame/blob/main/Images/p4.PNG?raw=true" alt="Error" width="75%"/>
 
 ## Kľúč <img align="right" alt="hemisfera.sk" width="32px" src="https://github.com/Zuvix/DungeonGame/blob/main/Images/key.png?raw=true" />
@@ -83,5 +84,17 @@ Ako ďalší herný prvok si naprogramujeme kľúč. Jeho jedinou úlohou je pri
   
 Pre detekovanie dotyku kľuča s hráčom použijeme udalosť **On Trigger Enter 2D**. Takýto typ udalosti vzniká ak sa dotknú dva herné objekty, a aspoň jeden z nich ma **collider** typu **trigger**. Trigger vpodstate znamená, že cez herný objekt sa dá prechádzať a pri prechode sa aktivuje spomenutá udalosť. 
 
-<img src="https://github.com/Zuvix/DungeonGame/blob/main/Images/Trigger.PNG?raw=true" alt="Error" width="50%"/>
- >**_Komponent Collider2D:_** Ak do hernej scény vložíme ľubovolný obrázok kameňa, slnka, hocičoho, nemôžeme čakať, že Unity bude samo od seba vedieť či ide o pevný objekt alebo len o grafiku, ktorá vypĺňa pozadie. Aby sme vedeli pevné objekty odlíšiť musíme objektu pridať *Collider2D*. Tento komponent vie mať rôzne tvary, ktoré nám pomáhaju približne ohraničiť herný objekt. Najčastejšie nám však stačí tvar krabice(Box collider2D), lebo je efektívny pre náš processor. V tomto projekte su collideri pridané za teba, však vo vlastnej hre si ich musíš popridávať sám. 
+<img src="https://github.com/Zuvix/DungeonGame/blob/main/Images/Trigger.PNG?raw=true" alt="Error" width="25%"/>
+
+>**_Komponent Collider2D:_** Ak do hernej scény vložíme ľubovolný obrázok kameňa, slnka, hocičoho, nemôžeme čakať, že Unity bude samo od seba vedieť či ide o pevný objekt alebo len o grafiku, ktorá vypĺňa pozadie. Aby sme vedeli pevné objekty odlíšiť musíme objektu pridať *Collider2D*. Tento komponent vie mať rôzne tvary, ktoré nám pomáhaju približne ohraničiť herný objekt. Najčastejšie nám však stačí tvar krabice(BoxCollider2D), lebo je efektívny pre náš processor. V tomto projekte su collideri pridané za teba, však vo vlastnej hre si ich musíš popridávať sám. 
+    
+Udalosť **On Trigger Enter 2D** nám na výstupnom bode ponúka informáciu o tom, aký objekt narazil do kľuča. My sa chceme spýtať, či sa objekt, ktorý do nás narazil volá Player. Na identifikáciu sa v Unity nezvykne používať meno objektu, ale existuje niečo ako **tag**. Totiž dva objekty nemôžu mať rovnaké meno, môžu však byť označené jedným tágom. Ak by sme sa pozreli na hráčov objekt tak jeho tag vidíme tu:
+
+<img src="https://github.com/Zuvix/DungeonGame/blob/main/Images/tag.PNG?raw=true" alt="Error" width="25%"/>
+  
+Keď spojíme všetky tieto znalosti a doplníme ešte príkaz pre zničenie objektu, tak vieme vytvoriť následovný skript pre kľuč:
+  
+<img src="https://github.com/Zuvix/DungeonGame/blob/main/Images/k1.PNG?raw=true" alt="Error" width="75%"/>
+  
+Teraz keď hráč narazí na kľuč, tak by sa mal zničiť. Druhá časť je zničenie dverí. Každým kľučom chceme ovoriť(zničiť) dvere do ktorých kľuč pasuje. Preto musíme vedieť priradiť herný objekt dverí. 
+
