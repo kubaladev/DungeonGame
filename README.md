@@ -4,9 +4,9 @@ Vitaj herný tvorca, vítam ťa vo svete Unity. Tento návod ti pomôže vytvori
   
 Ak sa zasekneš alebo si nebudeš v niektorej časti istý, tak neváhaj spýtať sa lektora alebo jedného z tvojích spolužiakov. **Držíme ti palce!**
 ## Inštalácia
-Aby si mohol začať programovat, tak potrebuješ mať stiahnuté unity, **verziu 2021** alebo novšiu. Ak ešte nemáš tak urob tak na [tomto linku](https://unity.com/download). Ak máš s inštaláciou problémy, tak skús si pozrieť [toto video](https://www.youtube.com/watch?v=9IKSJdNqzWg).
+Aby si mohol začať programovat, tak potrebuješ mať stiahnuté unity, **verziu 2021** alebo novšiu. Ak ešte Unity nemáš tak urob tak na [tomto linku](https://unity.com/download). Keby máš s inštaláciou problémy, tak skús si pozrieť [toto video](https://www.youtube.com/watch?v=9IKSJdNqzWg).
   
-Ďalším krokom je stiahnuť si projekt z tejto github stránky. Takto nebudeš musiet nahadzovať grafiku, objekty do hernej scény a môžeš sa sústrediť na programovanie. V prípade, že máš grafiku vlastnú, tak **odporúčam ti aj tak si spraviť najprv všetko s touto grafikou** a potom na záver ju **vymeniť za vlasnú**.
+Ďalším krokom je stiahnuť si projekt z github stránky. Takto nebudeš musiet nahadzovať grafiku, objekty do hernej scény a môžeš sa sústrediť na programovanie. V prípade, že máš grafiku vlastnú, tak **odporúčam ti aj tak si spraviť najprv všetko s touto grafikou** a potom na záver ju **vymeniť za vlasnú**.
   
 <img src="Images/0.gif?raw=true" alt="Error" width="75%"/>
   
@@ -20,7 +20,9 @@ Posledný krok je otvoriť si scénu **Level1**.
 
 ## Pohyb hráča <img align="right" alt="hemisfera.sk" width="32px" src="Images/player.png?raw=true" />
 Poďme si rozpohybovať hráča. Nájdime si, kde v projekte máme objekt hráča uložený. Mal by sa nachádzať v **priečinku prefabs**. Následne si ho rozklikneme možnosťou **open prefab**. Tento krok je dôležitý, **nepreskakuj ho!** Keďže ide o hru s pohľadom zhora, tak hráč by sa mal vedieť hýbať do všetkých smerov.  
-
+ 
+>**_Prefab_** je ako uložená herná šablóna pomocou ktorej vieme do levelu vkladať objekty ako sú mince, hráč, nepriatelia. Keby sme túto šablónu nepoužívali, tak všetko čo si naprogramoval napríklad jednej minci, by si musel všetkým iným minciam naprogramovať a ponastavovať znovu.
+  
 Pridajme hráčovi nový komponent typu Script machine, nazvime ho Player a uložme si tento graf do súboru.
   
 <img src="Images/1.gif?raw=true" alt="Error" width="75%"/>
@@ -34,15 +36,21 @@ Ako prvé musíme detekovať, kedy hráč stlačil klávesy na pohyb postavy. Na
 
 >**_Príkaz: GetAxisRaw("Horizontal)_** funguje tak, že ak je stlačená šípka vpravo, tak príkaz da výslednu hodnotu 1. Naopak ak je stlačená šípka  vľavo, tak príkaz da výslednu hodnotu -1. To je pre nás užitočné lebo hodnotu použijeme na posun po X osy. Rovnako to platí pre vertikálny smer.
 
-Výsledok príkazov si uložíme do nového **Vectoru3**(alebo Vectoru2, aj ten by fungoval správne, keďže robíme 2D hru).
-
 >**_Príkaz: Vector3 Create_** nám vytvorí Vektor, ktorí hovorí o **smere a veľkosti** posunu pre ľubovolný herný objekt. Používať ho budeme vždy keď budeme chcieť hýbať objektami. 
+  
+Výsledok príkazov si uložíme do nového **Vectoru3**(alebo Vectoru2, aj ten by fungoval správne, keďže robíme 2D hru).
 
 <img src="Images/p1.gif?raw=true" alt="Error" width="75%"/>
 
-Teraz keby si zavrel visual scripting okno a vrátil sa do hernej scény, môžeš hru pustiť. Všimni si, že hráč sa vie hýbať do všetkých smerov, akurat sa hýbe príšerne pomaly. Rýchlosť pohybu závisi od veľkosti vektora, ktorý posunieme do komponentu **RigidBody2D** *Set Velocity*. My mu teraz posúvame hodnoty -1, 1 poďla toho aké klávesy su stlačené. Prenásobme tieto hodnoty napríklad číslom 3 a uvidíme podstatné zrýchlenie. 
+Teraz keby si zavrel visual scripting okno a vrátil sa do hernej scény, môžeš hru pustiť. Všimni si, že hráč sa vie hýbať do všetkých smerov, akurat sa hýbe príšerne pomaly. Rýchlosť pohybu závisi od veľkosti vektora, ktorý posunieme do komponentu **RigidBody2D** *Set Velocity*. My mu teraz posúvame hodnoty -1, 1 poďla toho aké klávesy su stlačené.
+
+>**_Component RigidBody2D_** je spôsob akým vieme povedať nástroju Unity aby aplikoval fyzikálne pravidlá na daný herný objekt. My ho využívame iba na to aby sme mu priradili rýchlosť a pohli hráčom v danom smere pokiaľ nám neprekáža nejaký pevný objekt. V inom type hry by mohli byť užitočne aj iné vlastnosti *Rigidbody* komponentu ako gravitácia(napríklad pri platformer hre) alebo hmotnosť(pri zrážke dvoch rovnako rýchlych objektov odletí ďalej ten čo ma menšiu hmotnosť).
   
-Dobrou praxou je si hodnotu 3 ktorou chceme prenásobiť rýchlosť hráča uložiť do **hernej premennej**, ktorú nazveme napríklad **speed**. Ak by niekto pozeral náš skript tak bude lepšie rozumieť slovu speed ako náhodnemu číslu 3. 
+<img width="25%" src="Images/rigdbody.PNG?raw=true" />
+
+Ak chceme hráča zrýchliť, prenásobme hodnoty *Vectora3* napríklad číslom 3. Uvidíme podstatné zrýchlenie. 
+  
+Dobrou praxou je si hodnotu 3 ktorou chceme prenásobiť rýchlosť hráča uložiť do **hernej premennej**. Tú nazveme napríklad **speed**. Ak by niekto pozeral náš skript tak bude lepšie rozumieť slovu speed ako náhodnemu číslu 3. Predtým ako vytvoríme premennú, povieme si aké typy v Unity používame:
   
 **Typy premenných:**
 - **Float** predstavuje desatinné čísla naprílad: 0.5, -0.123, 1669, ...
@@ -56,23 +64,19 @@ Dobrou praxou je si hodnotu 3 ktorou chceme prenásobiť rýchlosť hráča ulo�
 >**_Tip 3: Pomenovanie premenných:_** prográmatori sa dohodli, že herné premenné budú vždy nazývať malým písmenom. Ak ide o zloženie slov napríklad *playerLife*, tak prvé slovo je malým písmenom a každé ďaľšie slovo začína veľkým. Medzeri v názve nesmú byť!
   
 <img src="Images/p2.gif?raw=true" alt="Error" width="75%"/>
-
->**_Component RigidBody2D_** je spôsob akým vieme povedať nástroju Unity aby aplikoval fyzikálne pravidlá na daný herný objekt. My ho využívame iba na to aby sme mu priradili rýchlosť a pohli hráčom v danom smere pokiaľ nám neprekáža nejaký pevný objekt. V inom type hry by mohli byť užitočne aj iné vlastnosti *Rigidbody* komponentu ako gravitácia(napríklad pri platformer hre) alebo hmotnosť(pri zrážke dvoch rovnako rýchlych objektov odletí ďalej ten čo ma menšiu hmotnosť).
   
-<img width="25%" src="Images/rigdbody.PNG?raw=true" />
-  
-Rýchlosť hráča máme vyriešenú, pokiaľ chceš možeš mu pridať alebo ubrať z hodnoty 3. Ešte takým vizuálnym vylepšením by bolo otočiť obrázok hráča do smeru v ktoróm sa pohybuje. Najlepší spôsob riešenia je použitím komponentu **Sprite Renderer**. A to pomocou premennej **Flip X**. Ak hodnotu premennej označíš v editore ako pravdivú, hráč sa bude pozerať opačným smerom.
+Rýchlosť hráča máme vyriešenú, pokiaľ chceš možeš mu zmeniť hodnotu rýchlosti podľa pocitu. Ešte takým vizuálnym vylepšením by bolo otočiť obrázok hráča do smeru v ktoróm sa pohybuje. Najlepší spôsob riešenia je použitím komponentu **Sprite Renderer**. A to pomocou premennej **Flip X**. Ak hodnotu premennej označíš v editore ako pravdivú, hráčová postava sa bude pozerať opačným smerom.
   
 <img width="25%" src="Images/sprite.PNG?raw=true" />
   
-Teraz podobnú vec spravíme vo visual scripte. Pomocou príkazu **if** rozdelíme hlavný tok programu na vetvu v ktorej hráč kráča smmerom vľavo a vetvu v ktorej kráča vpravo. Aby program vedel podľa čoho si má vetvu vybrať tak porovnáme veľkosť **X súracnice** s hodnotou 0(porovnávanie vieme spraviť príkazom *less* alebo *greater*. **Výsledok porovnania** potom vložíme ako vstup do príkazu **if**.
+Teraz podobnú vec spravíme vo visual scripte. Pomocou príkazu **if** rozdelíme hlavný tok programu na vetvu v ktorej hráč kráča smmerom vľavo a vetvu v ktorej kráča vpravo. Aby program vedel podľa čoho si má vetvu vybrať tak porovnáme veľkosť **X súracnice** vektoru pohybu s hodnotou 0. Porovnávanie vieme spraviť príkazom *less* alebo *greater*. **Výsledok porovnania** potom vložíme ako vstup do príkazu **if**.
   
 <img src="Images/p3.gif?raw=true" alt="Error" width="75%"/>
 
 >**_Tip 4: Kopírovanie príkazov:_** najľahší spôsob ako kopírovať je pomocou **označenia príkazu na kopírovanie** a klávesovej skratky **Ctrl + D**.
 
 ### Bonus 
-Základ pohybu už by sme mali, ale ak ho chceš vylepšit, tak ešte musíme opraviť jednu chybu. Keď sa postava hýbe diagonálnym smerom(napr. vľavo hore) tak sa hýbe rýchlejšie ako keď sa hýbe iba priamim smerom(vľavo, vpravo, hore, dole). Na to sa používa technika nazývaná [normalizácia vektora](https://www.youtube.com/watch?v=oCU8Ew1XTbs). Pointa je, že vektor zmenšíme, tak aby sme **zachovali jeho smer**, ale **zmenšili veľkosť vekotra na 1**. Vektor bude mať hodnotu 1 pre priamy pohyb, aj pre diagonálny pohyb. Potom ho jednoducho prenásobime rýchlosťou a chybu sme odstránili. 
+Základ pohybu už by sme mali, ale ak ho chceš vylepšit, tak ešte musíme opraviť jednu chybu. Keď sa postava hýbe diagonálnym smerom(napr. vľavo hore) tak sa hýbe rýchlejšie ako keď sa hýbe iba priamim smerom(vľavo, vpravo, hore, dole). Na to sa používa technika nazývaná [normalizácia vektora](https://www.youtube.com/watch?v=oCU8Ew1XTbs). Pointa je, že vektor zmenšíme tak, aby sme **zachovali jeho smer**. Výsledná veľkosť vektora bude vždy 1. Vektor bude mať hodnotu 1 pre priamy pohyb, aj pre diagonálny pohyb. Následne ho jednoducho prenásobime rýchlosťou(premenná speed) a chybu sme odstránili. 
 
 ### Výsledny skript:  
 <img src="Images/p4.PNG?raw=true" alt="Error" width="75%"/>
@@ -82,7 +86,7 @@ Ako ďalší herný prvok si naprogramujeme kľúč. Jeho jedinou úlohou je pri
   
 <img src="Images/k0.gif?raw=true" alt="Error" width="75%"/>
   
-Pre detekovanie dotyku kľuča s hráčom použijeme udalosť **On Trigger Enter 2D**. Takýto typ udalosti vzniká ak sa dotknú dva herné objekty, a aspoň jeden z nich ma **collider** typu **trigger**. Trigger vpodstate znamená, že cez herný objekt sa dá prechádzať a pri prechode sa aktivuje spomenutá udalosť. 
+Pre detekovanie dotyku kľuča s hráčom použijeme udalosť **On Trigger Enter 2D**. Takýto typ udalosti vzniká ak sa dotknú dva herné objekty a aspoň jeden z nich ma **collider** typu **trigger**. Trigger vpodstate znamená, že cez herný objekt sa dá prechádzať a pri prechode sa aktivuje spomenutá udalosť. 
 
 <img src="Images/Trigger.PNG?raw=true" alt="Error" width="25%"/>
 
