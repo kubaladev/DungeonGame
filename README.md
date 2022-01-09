@@ -132,3 +132,19 @@ Teraz musíme priradiť Text vytvorený v našej scéne do premmenej coinTxt. Da
   
 <img src="Images/c3.PNG?raw=true" alt="Error" width="75%"/>
   
+Herný objekt textu nájdeme pomocou príkazu **Game Object Find** a z neho získame samotný Text pomocou **Get Component**, kde **type = Text**. Následne si hodnotu uložíme do premennnej coinText, ktorú sme si v minulom kroku vytvorili. 
+
+<img src="Images/c4.gif?raw=true" alt="Error" width="75%"/>
+  
+Ostáva nám spraviť samotné propočítanie získanej mince do celkového počtu mincí. Proces je trochu komplikovaný, pretože musíme: 
+1. získať súčasný počet mincí a pripočítať hodnotu 1
+2. uložiť nový počet mincí do premmenej coins
+3. konvertovať číselnu hodnotú mincí na string(textový reťazec)
+4. uložiť vytvorený string do Textu aby ho hráč videl
+  
+<img src="Images/c5.gif?raw=true" alt="Error" width="75%"/>
+  
+Ak všetko správne spravíš tak máme hotovo a vieme zbierať mince. :)
+
+### Výsledny skript:  
+<img src="Images/c6.PNG?raw=true" alt="Error" width="75%"/>
