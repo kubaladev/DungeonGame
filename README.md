@@ -112,7 +112,8 @@ Správne priradenie si otestuj a ak si nikde nesparavil chybu tak kľuč máš h
 
 ### Výsledny skript:  
 <img src="Images/k4.PNG?raw=true" alt="Error" width="75%"/>
-
+  
+>**_Tip 5: Warning:_** príkaz **Game Object Destroy** je žltou farbou označený preto, že ide o varovanie. Varovanie neznamená, že ide nutne o chybu, ale že si máme dať pozor, lebo by chyba mohla nastať. Varuje nás preto, lebo hodnota premennej *dvere* **nie je definovaná**. Ak by sme v editore nepriradili ku každému kľuču jeho dvere, tak by nám Script Machine pre daný kľúč ohlásíl chybu a nastal by v hre **bug**(slovíčko pre nežiadané alebo chybné správanie).
 ## Coin  <img align="right" alt="hemisfera.sk" width="32px" src="https://github.com/Zuvix/DungeonGame/blob/main/Images/coin.png?raw=true" />
 
 Našou ďaľšou úlohou je spraviť si zberateľný coin. Coin bude predstavovať hráčové skóre a jeho cieľom bude nie len prejsť level, ale aj pozbierať čo najviac mincí. Aby sme začali, tak nájdi si coin prefab v priečinku Prefabs. Otvor ho a podobne, ako v predchádzajúcich prípadoch ho edituj. Vytvor **Script Machine** komponent a nový graf s názvom **coin**.
