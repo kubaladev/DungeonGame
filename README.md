@@ -127,3 +127,8 @@ Kolíziu coinu a hráča vyriešime podobne ako kľúč. Ak ľubovolny objekt na
 Aby sme vedeli coiny ukladať a zobrazovať hráčovi potrebujeme dve premenné. Prvá bude **coinTxt** a bude typu Text. **Text** je objekt ktorý nám umoňuje zobrazovať texty na hernú obrazovku. Druhá premenná bude **coins** a bude typu **Integer**. Špecialitou tejto premennej je to, že ju spravvíme ako **Scene Variable**. Takýmto spôosobom ju budu vedieť zdieľať všetky objekty v danom levely. My ju potrebujeme, aby sme ju mohli zdielať pre každý coin.
   
 <img src="Images/c2.gif?raw=true" alt="Error" width="25%"/>
+  
+Teraz musíme priradiť Text vytvorený v našej scéne do premmenej coinTxt. Daný text nájdeš ak si rozklikneš objekt Canvas. **Canvas** sa v Unity používa vždy keď chceme zobraziť tlačidlá, texty, ikonky a podobne. Jeho výhoda je okrem iného, že sa vie prispôsobiť veľkosti hernej obrazovky, ale aj, že počas pohybu hráča zostávaju zobrazené texty nehybné.
+  
+<img src="Images/c3.Png?raw=true" alt="Error" width="75%"/>
+  
