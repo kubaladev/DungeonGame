@@ -112,3 +112,13 @@ Správne priradenie si otestuj a ak si nikde nesparavil chybu tak kľuč máš h
 
 ### Výsledny skript:  
 <img src="Images/k4.PNG?raw=true" alt="Error" width="75%"/>
+
+## Coin  <img align="right" alt="hemisfera.sk" width="32px" src="https://github.com/Zuvix/DungeonGame/blob/main/Images/coin.png?raw=true" />
+
+Našou ďaľšou úlohou je spraviť si zberateľný coin. Coin bude predstavovať hráčové skóre a jeho cieľom bude nie len prejsť level, ale aj pozbierať čo najviac mincí. Aby sme začali, tak nájdi si coin prefab v priečinku Prefabs. Otvor ho a podobne, ako v predchádzajúcich prípadoch ho edituj. Vytvor **Script Machine** komponent a nový graf s názvom **coin**.
+  
+<img src="Images/c0.PNG?raw=true" alt="Error" width="75%"/>
+    
+Kolíziu coinu a hráča vyriešime podobne ako kľúč. Ak ľubovolny objekt narazí do coinu, tak skontrolujeme, či jeho tag je *Player*. Ak áno tak coin zničíme. 
+  
+<img src="Images/c1.PNG?raw=true" alt="Error" width="75%"/>
