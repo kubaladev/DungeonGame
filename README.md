@@ -137,14 +137,14 @@ Herný objekt textu nájdeme pomocou príkazu **Game Object Find** a z neho zís
 <img src="Images/c4.gif?raw=true" alt="Error" width="80%"/>
   
 Ostáva nám spraviť samotné propočítanie získanej mince do celkového počtu mincí. Proces je trochu komplikovaný, pretože musíme: 
-1. získať súčasný počet mincí a pripočítať hodnotu 1
-2. uložiť nový počet mincí do premmenej coins
-3. konvertovať číselnu hodnotú mincí na string(textový reťazec)
-4. uložiť vytvorený string do Textu aby ho hráč videl
+1. získať súčasný počet mincí a pripočítať hodnotu 1,
+2. uložiť nový počet mincí do premennej coins,
+3. konvertovať číselnu hodnotú mincí na string(textový reťazec),
+4. uložiť vytvorený string do Textu aby ho hráč videl.
   
 <img src="Images/c5.gif?raw=true" alt="Error" width="80%"/>
   
-Ak všetko správne spravíš tak máme hotovo a vieme zbierať mince. :)
+Ak všetko spravíš správne, tak máme hotovo a vieme zbierať mince. :)
 
 ### Výsledný skript:  
 <img src="Images/c6.PNG?raw=true" alt="Error" width="80%"/>
