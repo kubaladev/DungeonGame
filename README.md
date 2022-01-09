@@ -78,7 +78,7 @@ Teraz podobnú vec spravíme vo visual scripte. Pomocou príkazu **if** rozdelí
 ### Bonus 
 Základ pohybu už by sme mali, ale ak ho chceš vylepšit, tak ešte musíme opraviť jednu chybu. Keď sa postava hýbe diagonálnym smerom(napr. vľavo hore) tak sa hýbe rýchlejšie ako keď sa hýbe iba priamim smerom(vľavo, vpravo, hore, dole). Na to sa používa technika nazývaná [normalizácia vektora](https://www.youtube.com/watch?v=oCU8Ew1XTbs). Pointa je, že vektor zmenšíme tak, aby sme **zachovali jeho smer**. Výsledná veľkosť vektora bude vždy 1. Vektor bude mať hodnotu 1 pre priamy pohyb, aj pre diagonálny pohyb. Následne ho jednoducho prenásobime rýchlosťou(premenná speed) a chybu sme odstránili. 
 
-### Výsledny skript:  
+### Výsledný skript:  
 <img src="Images/p4.PNG?raw=true" alt="Error" width="75%"/>
 
 ## Kľúč <img align="right" alt="hemisfera.sk" width="32px" src="https://github.com/Zuvix/DungeonGame/blob/main/Images/key.png?raw=true" />
@@ -110,7 +110,7 @@ Priradenie dverí spravíme priamo v hernej scéne. Naštastie máme herné obje
   
 Správne priradenie si otestuj a ak si nikde nesparavil chybu tak kľuč máš hotoví!
 
-### Výsledny skript:  
+### Výsledný skript:  
 <img src="Images/k4.PNG?raw=true" alt="Error" width="75%"/>
   
 >**_Tip 5: Warning:_** príkaz **Game Object Destroy** je žltou farbou označený preto, že ide o varovanie. Varovanie neznamená, že ide nutne o chybu, ale že si máme dať pozor, lebo by chyba mohla nastať. Varuje nás preto, lebo hodnota premennej *dvere* **nie je definovaná**. Ak by sme v editore nepriradili ku každému kľuču jeho dvere, tak by nám Script Machine pre daný kľúč ohlásíl chybu a nastal by v hre **bug**(slovíčko pre nežiadané alebo chybné správanie).
@@ -146,5 +146,5 @@ Ostáva nám spraviť samotné propočítanie získanej mince do celkového poč
   
 Ak všetko správne spravíš tak máme hotovo a vieme zbierať mince. :)
 
-### Výsledny skript:  
+### Výsledný skript:  
 <img src="Images/c6.PNG?raw=true" alt="Error" width="75%"/>
