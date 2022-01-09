@@ -124,3 +124,6 @@ Kolíziu coinu a hráča vyriešime podobne ako kľúč. Ak ľubovolny objekt na
   
 <img src="Images/c1.PNG?raw=true" alt="Error" width="75%"/>
   
+Aby sme vedeli coiny ukladať a zobrazovať hráčovi potrebujeme dve premenné. Prvá bude **coinTxt** a bude typu Text. **Text** je objekt ktorý nám umoňuje zobrazovať texty na hernú obrazovku. Druhá premenná bude **coins** a bude typu **Integer**. Špecialitou tejto premennej je to, že ju spravvíme ako **Scene Variable**. Takýmto spôosobom ju budu vedieť zdieľať všetky objekty v danom levely. My ju potrebujeme, aby sme ju mohli zdielať pre každý coin.
+  
+<img src="Images/c2.gif?raw=true" alt="Error" width="25%"/>
