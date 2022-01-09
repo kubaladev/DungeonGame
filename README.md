@@ -123,3 +123,4 @@ Našou ďaľšou úlohou je spraviť si zberateľný coin. Coin bude predstavova
 Kolíziu coinu a hráča vyriešime podobne ako kľúč. Ak ľubovolny objekt narazí do coinu, tak skontrolujeme, či jeho tag je *Player*. Ak áno tak coin zničíme. 
   
 <img src="Images/c1.PNG?raw=true" alt="Error" width="75%"/>
+  
