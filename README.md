@@ -5,12 +5,12 @@ Vitaj herný tvorca, vítam ťa vo svete Unity. Tento návod ti pomôže vytvori
 Ak sa zasekneš alebo si nebudeš v niektorej časti istý, tak neváhaj spýtať sa lektora alebo jedného z tvojích spolužiakov. **Držíme ti palce!**
 
 # Obsah
-1. [**Inštalácia**](#install)
+1. [**Inštalácia** :electric_plug:](#install)
 2. [**Pohyb hráča** <img alt="hemisfera.sk" width="16px" src="Images/player.png?raw=true" />](#movement)
 3. [**Klúč** <img alt="hemisfera.sk" width="16px" src="Images/key.png?raw=true" />](#key)
 4. [**Coin** <img alt="hemisfera.sk" width="16px" src="Images/coin.png?raw=true" />](#coin)
 
-## Inštalácia <a name="install"></a>
+## Inštalácia :electric_plug: <a name="install"></a>
 Aby si mohol začať programovat, tak potrebuješ mať stiahnuté unity, **verziu 2021** alebo novšiu. Ak ešte Unity nemáš tak urob tak na [tomto linku](https://unity.com/download). Keby máš s inštaláciou problémy, tak skús si pozrieť [toto video](https://www.youtube.com/watch?v=9IKSJdNqzWg).
   
 Ďalším krokom je stiahnuť si projekt z github stránky. Takto nebudeš musiet nahadzovať grafiku, objekty do hernej scény a môžeš sa sústrediť na programovanie. V prípade, že máš grafiku vlastnú, tak **odporúčam ti aj tak si spraviť najprv všetko s touto grafikou** a potom na záver ju **vymeniť za vlasnú**.
