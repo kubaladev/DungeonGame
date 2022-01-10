@@ -3,7 +3,14 @@
 Vitaj herný tvorca, vítam ťa vo svete Unity. Tento návod ti pomôže vytvoriť vlastnú 2D hru žánru [Dungeon Crawler](https://www.youtube.com/watch?v=FQed13kgHSE). Hráč ovláda hrdinu, ktorý sa ocitol v mysterióznej jaskyni plnej nástrah a nepriatelov. Naprogramuj ho tak, aby sa mu podarilo z jaskyne dostať a zároveň, aby to pre teba ako hráča bola výzva.
   
 Ak sa zasekneš alebo si nebudeš v niektorej časti istý, tak neváhaj spýtať sa lektora alebo jedného z tvojích spolužiakov. **Držíme ti palce!**
-## Inštalácia
+
+# Obsah
+1. [Inštalácia](#install)
+2. [Pohyb hráča](#movement)
+3. [Klúč](#key)
+4. [Coin](#coin)
+
+## Inštalácia <a name="install"></a>
 Aby si mohol začať programovat, tak potrebuješ mať stiahnuté unity, **verziu 2021** alebo novšiu. Ak ešte Unity nemáš tak urob tak na [tomto linku](https://unity.com/download). Keby máš s inštaláciou problémy, tak skús si pozrieť [toto video](https://www.youtube.com/watch?v=9IKSJdNqzWg).
   
 Ďalším krokom je stiahnuť si projekt z github stránky. Takto nebudeš musiet nahadzovať grafiku, objekty do hernej scény a môžeš sa sústrediť na programovanie. V prípade, že máš grafiku vlastnú, tak **odporúčam ti aj tak si spraviť najprv všetko s touto grafikou** a potom na záver ju **vymeniť za vlasnú**.
@@ -18,7 +25,7 @@ Posledný krok je otvoriť si scénu **Level1**.
   
 <img src="Images/02.gif?raw=true" alt="Error" width="80%"/>
 
-## Pohyb hráča <img align="right" alt="hemisfera.sk" width="32px" src="Images/player.png?raw=true" />
+## Pohyb hráča <a name="movement"></a> <img align="right" alt="hemisfera.sk" width="32px" src="Images/player.png?raw=true" />
 Poďme si rozpohybovať hráča. Nájdime si, kde v projekte máme objekt hráča uložený. Mal by sa nachádzať v **priečinku prefabs**. Následne si ho rozklikneme možnosťou **open prefab**. Tento krok je dôležitý, **nepreskakuj ho!** Keďže ide o hru s pohľadom zhora, tak hráč by sa mal vedieť hýbať do všetkých smerov.  
  
 >**_Prefab_** je ako uložená herná šablóna pomocou ktorej vieme do levelu vkladať objekty ako sú mince, hráč, nepriatelia. Keby sme túto šablónu nepoužívali, tak všetko čo si naprogramoval napríklad jednej minci, by si musel všetkým iným minciam naprogramovať a ponastavovať znovu.
@@ -81,7 +88,7 @@ Základ pohybu už by sme mali, ale ak ho chceš vylepšit, tak ešte musíme op
 ### Výsledný skript:  
 <img src="Images/p4.PNG?raw=true" alt="Error" width="80%"/>
 
-## Kľúč <img align="right" alt="hemisfera.sk" width="32px" src="https://github.com/Zuvix/DungeonGame/blob/main/Images/key.png?raw=true" />
+## Kľúč <a name="key"></a> <img align="right" alt="hemisfera.sk" width="32px" src="https://github.com/Zuvix/DungeonGame/blob/main/Images/key.png?raw=true" />
 Ako ďalší herný prvok si naprogramujeme kľúč. Jeho jedinou úlohou je pri dotyku s hráčom otvoriť príslušné dvere a uvoľniť hráčovi cestu. Pre začiatok si **otvoríme prefab kľúča** a pridáme **Script Machine** komponent podobne ako sme robili pri hráčovi.
   
 <img src="Images/k0.gif?raw=true" alt="Error" width="80%"/>
@@ -114,7 +121,7 @@ Správne priradenie si otestuj a ak si nikde nesparavil chybu tak kľuč máš h
 <img src="Images/k4.PNG?raw=true" alt="Error" width="80%"/>
   
 >**_Tip 5: Warning:_** príkaz **Game Object Destroy** je žltou farbou označený preto, že ide o varovanie. Varovanie neznamená, že ide nutne o chybu, ale že si máme dať pozor, lebo by chyba mohla nastať. Varuje nás preto, lebo hodnota premennej *dvere* **nie je definovaná**. Ak by sme v editore nepriradili ku každému kľuču jeho dvere, tak by nám Script Machine pre daný kľúč ohlásíl chybu a nastal by v hre **bug**(slovíčko pre nežiadané alebo chybné správanie).
-## Coin  <img align="right" alt="hemisfera.sk" width="32px" src="https://github.com/Zuvix/DungeonGame/blob/main/Images/coin.png?raw=true" />
+## Coin <a name="coin"></a <img align="right" alt="hemisfera.sk" width="32px" src="https://github.com/Zuvix/DungeonGame/blob/main/Images/coin.png?raw=true" />
 
 Našou ďaľšou úlohou je spraviť si zberateľný coin. Coin bude predstavovať hráčové skóre a jeho cieľom bude nie len prejsť level, ale aj pozbierať čo najviac mincí. Aby sme začali, tak nájdi si coin prefab v priečinku Prefabs. Otvor ho a podobne, ako v predchádzajúcich prípadoch ho edituj. Vytvor **Script Machine** komponent a nový graf s názvom **coin**.
   
