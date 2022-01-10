@@ -17,7 +17,7 @@ Aby si mohol začať programovat, tak potrebuješ mať stiahnuté unity, **verzi
   
 <img src="Images/0.gif?raw=true" alt="Error" width="80%"/>
   
-Keď máš projekt stiahnutí otvor si ho pomocou Unity Hubu. Ak máš nainštalovaných viacero verzii daj pozor aby si ju otvoril v tej 2021. 
+Keď máš projekt stiahnutí, [odzipuj](https://www.youtube.com/watch?v=XAFwU2BQwHE) si ho na miesto kde ho chceš mať uložený a otvor si ho pomocou Unity Hubu. Ak máš nainštalovaných viacero verzii daj pozor aby si ju otvoril v tej 2021. 
   
 <img src="Images/01.gif?raw=true" alt="Error" width="80%"/>
   
