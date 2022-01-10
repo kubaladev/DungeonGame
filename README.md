@@ -5,10 +5,10 @@ Vitaj herný tvorca, vítam ťa vo svete Unity. Tento návod ti pomôže vytvori
 Ak sa zasekneš alebo si nebudeš v niektorej časti istý, tak neváhaj spýtať sa lektora alebo jedného z tvojích spolužiakov. **Držíme ti palce!**
 
 # Obsah
-1. [Inštalácia](#install)
-2. [Pohyb hráča](#movement)
-3. [Klúč](#key)
-4. [Coin](#coin)
+1. [**Inštalácia**](#install)
+2. [**Pohyb hráča** <img alt="hemisfera.sk" width="16px" src="Images/player.png?raw=true" />](#movement)
+3. [**Klúč** <img alt="hemisfera.sk" width="16px" src="Images/key.png?raw=true" />](#key)
+4. [**Coin** <img alt="hemisfera.sk" width="16px" src="Images/coin.png?raw=true" />](#coin)
 
 ## Inštalácia <a name="install"></a>
 Aby si mohol začať programovat, tak potrebuješ mať stiahnuté unity, **verziu 2021** alebo novšiu. Ak ešte Unity nemáš tak urob tak na [tomto linku](https://unity.com/download). Keby máš s inštaláciou problémy, tak skús si pozrieť [toto video](https://www.youtube.com/watch?v=9IKSJdNqzWg).
@@ -121,7 +121,7 @@ Správne priradenie si otestuj a ak si nikde nesparavil chybu tak kľuč máš h
 <img src="Images/k4.PNG?raw=true" alt="Error" width="80%"/>
   
 >**_Tip 5: Warning:_** príkaz **Game Object Destroy** je žltou farbou označený preto, že ide o varovanie. Varovanie neznamená, že ide nutne o chybu, ale že si máme dať pozor, lebo by chyba mohla nastať. Varuje nás preto, lebo hodnota premennej *dvere* **nie je definovaná**. Ak by sme v editore nepriradili ku každému kľuču jeho dvere, tak by nám Script Machine pre daný kľúč ohlásíl chybu a nastal by v hre **bug**(slovíčko pre nežiadané alebo chybné správanie).
-## Coin <a name="coin"></a <img align="right" alt="hemisfera.sk" width="32px" src="https://github.com/Zuvix/DungeonGame/blob/main/Images/coin.png?raw=true" />
+## Coin <a name="coin"></a> <img align="right" alt="hemisfera.sk" width="32px" src="https://github.com/Zuvix/DungeonGame/blob/main/Images/coin.png?raw=true" />
 
 Našou ďaľšou úlohou je spraviť si zberateľný coin. Coin bude predstavovať hráčové skóre a jeho cieľom bude nie len prejsť level, ale aj pozbierať čo najviac mincí. Aby sme začali, tak nájdi si coin prefab v priečinku Prefabs. Otvor ho a podobne, ako v predchádzajúcich prípadoch ho edituj. Vytvor **Script Machine** komponent a nový graf s názvom **coin**.
   
