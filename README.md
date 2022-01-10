@@ -9,6 +9,8 @@ Ak sa zasekneš alebo si nebudeš v niektorej časti istý, tak neváhaj spýta�
 2. [**Pohyb hráča** <img alt="hemisfera.sk" width="16px" src="Images/player.png?raw=true" />](#movement)
 3. [**Klúč** <img alt="hemisfera.sk" width="16px" src="Images/key.png?raw=true" />](#key)
 4. [**Coin** <img alt="hemisfera.sk" width="16px" src="Images/coin.png?raw=true" />](#coin)
+5. [**Pasca** <img alt="hemisfera.sk" width="16px" src="Images/trap.png?raw=true" />](#trap)
+6. [**Nepriateľ** <img alt="hemisfera.sk" width="16px" src="Images/enemy.png?raw=true" />](#enemy)
 
 ## Inštalácia :electric_plug: <a name="install"></a>
 Aby si mohol začať programovat, tak potrebuješ mať stiahnuté unity, **verziu 2021** alebo novšiu. Ak ešte Unity nemáš tak urob tak na [tomto linku](https://unity.com/download). Keby máš s inštaláciou problémy, tak skús si pozrieť [toto video](https://www.youtube.com/watch?v=9IKSJdNqzWg).
@@ -41,7 +43,7 @@ Pridajme hráčovi nový komponent typu Script machine, nazvime ho Player a ulo�
 
 Ako prvé musíme detekovať, kedy hráč stlačil klávesy na pohyb postavy. Najlepši spôsob je použiť príkaz **Get Axis Raw**. V ňom upresníme, či sa chceme snímať **horizontálny**(vľavo-vpravo) alebo **vertikálny**(hore-dole) pohyb. V našom prípade chceme oba typy sledovať, pretože hráč sa vie pohybovať do všetkých smerov.
 
->**_Príkaz: GetAxisRaw("Horizontal)_** funguje tak, že ak je stlačená šípka vpravo, tak príkaz da výslednu hodnotu 1. Naopak ak je stlačená šípka  vľavo, tak príkaz da výslednu hodnotu -1. To je pre nás užitočné lebo hodnotu použijeme na posun po X osy. Rovnako to platí pre vertikálny smer.
+>**_Príkaz: GetAxisRaw("Horizontal")_** funguje tak, že ak je stlačená šípka vpravo, tak príkaz da výslednu hodnotu 1. Naopak ak je stlačená šípka  vľavo, tak príkaz da výslednu hodnotu -1. To je pre nás užitočné lebo hodnotu použijeme na posun po X osy. Rovnako to platí pre vertikálny smer.
 
 >**_Príkaz: Vector3 Create_** nám vytvorí Vektor, ktorí hovorí o **smere a veľkosti** posunu pre ľubovolný herný objekt. Používať ho budeme vždy keď budeme chcieť hýbať objektami. 
   
@@ -135,12 +137,14 @@ Aby sme vedeli coiny ukladať a zobrazovať hráčovi potrebujeme dve premenné.
   
 <img src="Images/c2.gif?raw=true" alt="Error" width="25%"/>
   
-Teraz musíme priradiť Text vytvorený v našej scéne do premmenej coinTxt. Daný text nájdeš ak si rozklikneš objekt Canvas. **Canvas** sa v Unity používa vždy keď chceme zobraziť tlačidlá, texty, ikonky a podobne. Jeho výhoda je okrem iného, že sa vie prispôsobiť veľkosti hernej obrazovky, ale aj, že počas pohybu hráča zostávajú zobrazené texty nehybné.
+Teraz musíme priradiť Text vytvorený v našej scéne do premennej **coinTxt**. Daný text nájdeš ak si rozklikneš objekt Canvas. **Canvas** sa v Unity používa vždy keď chceme zobraziť tlačidlá, texty, ikonky a podobne. Jeho výhoda je okrem iného, že sa vie prispôsobiť veľkosti hernej obrazovky, ale aj, že počas pohybu hráča zostávajú zobrazené texty nehybné.
   
 <img src="Images/c3.PNG?raw=true" alt="Error" width="80%"/>
   
 Herný objekt textu nájdeme pomocou príkazu **Game Object Find** a z neho získame samotný Text pomocou **Get Component**, kde **type = Text**. Následne si hodnotu uložíme do premennnej coinText, ktorú sme si v minulom kroku vytvorili. 
 
+>**_Príkaz: Get Component:_** Tento príkaz budeš časom používať často. Každý herný objekt je v Unity zložený z kombinácie komponentov ako **Transform** na uloženie pozície objektu v scéne, **Sprite Renderer** na vykreslenie 2D grafiky, **Rigidbody2D** na aplikovanie fyziky a výnimkou nie je ani **Text** na zobrazenie textov. Ak chceme meniť vlasnosti ľubovolného komponentu z herného objektu, vieme si komponent získať pomocou tohto príkazu a následne s nim pracovať ako potrebujeme.
+  
 <img src="Images/c4.gif?raw=true" alt="Error" width="80%"/>
   
 Ostáva nám spraviť samotné propočítanie získanej mince do celkového počtu mincí. Proces je trochu komplikovaný, pretože musíme: 
