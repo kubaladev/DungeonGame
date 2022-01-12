@@ -159,3 +159,6 @@ Ak všetko spravíš správne, tak máme hotovo a vieme zbierať mince. :)
 
 ### Výsledný skript:  
 <img src="Images/c6.PNG?raw=true" alt="Error" width="80%"/>
+
+## Pasca <a name="trap"></a> <img align="left" alt="hemisfera.sk" width="32px" src="Images/trap.png?raw=true" />
+Zatiaľ pre hráče v hre neexistuje žiadna hrozba a to je na čase zmeniť. Poďme si vytvoriť pascu, ktorá sa striedavo aktivuje a deaktivuje v časovom intervale.
