@@ -165,6 +165,6 @@ Zatiaľ pre hráče v hre neexistuje žiadna hrozba a to je na čase zmeniť. Po
   
 Ako prvé spravíme animáciu. O animácie sa v Unity stará component s názvom **Animator**. My už ho máme v pasci pridaný a nastavili sme mu aj animácie. Tvojou úlohou je iba prepínať animáciu pomocou premennej **isActive**, ktorú som ja ako tvorca návodu vytvoril v animátore. Ak je premmená **isActive** typu **bool** nastavená na hodnotu *True*, tak sa zapne animácia **TrapUp**, naopak ak je hodnota premennej *False* tak pasca sa sa prepne do **TrapOff*.
   
-<img src="Images/t,.PNG?raw=true" alt="Error" width="80%"/>
+<img src="Images/t0.PNG?raw=true" alt="Error" width="80%"/>
 
 >**_Component Animator:_** funguje ako správca všetkých animácii, ktoré vytvoríme pre daný herný objekt. Ide o podobný typ grafu ako používame pri Visual scriptingu. Todo...
