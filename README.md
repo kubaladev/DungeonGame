@@ -163,7 +163,7 @@ Ak všetko spravíš správne, tak máme hotovo a vieme zbierať mince. :)
 ## Pasca <a name="trap"></a> <img align="left" alt="hemisfera.sk" width="32px" src="Images/trap.png?raw=true" />
 Zatiaľ pre hráče v hre neexistuje žiadna hrozba a to je na čase zmeniť. Poďme si vytvoriť pascu, ktorá sa striedavo aktivuje a deaktivuje v časovom intervale. Nájdi si **trap prefab**, otvor ho, pridaj mu Script Machine component a môžeme editovať. 
   
-Ako prvé spravíme animáciu. O animácie sa v Unity stará component s názvom **Animator**. My už ho máme v pasci pridaný a nastavili sme mu aj animácie. Tvojou úlohou je iba prepínať animáciu pomocou premennej **isActive**, ktorú som ja ako tvorca návodu vytvoril v animátore. Ak je premmená **isActive** typu **bool** nastavená na hodnotu *True*, tak sa zapne animácia **TrapUp**, naopak ak je hodnota premennej *False* tak pasca sa sa prepne do **TrapOff*.
+Ako prvé spravíme animáciu. O animácie sa v Unity stará component s názvom **Animator**. My už ho máme v pasci pridaný a nastavili sme mu aj animácie. Tvojou úlohou je iba prepínať animáciu pomocou premennej **isActive**, ktorú som ja ako tvorca návodu vytvoril v animátore. Ak je premmená **isActive** typu **bool** nastavená na hodnotu *True*, tak sa zapne animácia **TrapOn**, naopak ak je hodnota premennej *False* tak pasca sa sa prepne do **TrapOff**.
   
 <img src="Images/t0.PNG?raw=true" alt="Error" width="80%"/>
 
