@@ -168,3 +168,5 @@ Ako prvé spravíme animáciu. O animácie sa v Unity stará component s názvom
 <img src="Images/t0.PNG?raw=true" alt="Error" width="80%"/>
 
 >**_Component Animator:_** funguje ako správca všetkých animácii, ktoré vytvoríme pre daný herný objekt. Ide o podobný typ grafu ako používame pri Visual scriptingu. Todo...
+
+Ak stihnes spravit vsetko co je zatial pridane, tak si pozri [Animacie](https://www.youtube.com/watch?v=hkaysu1Z-N), skus spravit sam pascu ktora striela sipy jednym smerom v nejakom intervale alebo pomoz svojim spoluziakom.
