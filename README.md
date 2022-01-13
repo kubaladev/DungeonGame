@@ -97,13 +97,13 @@ Ako ďalší herný prvok si naprogramujeme kľúč. Jeho jedinou úlohou je pri
   
 Pre detekovanie dotyku kľuča s hráčom použijeme udalosť **On Trigger Enter 2D**. Takýto typ udalosti vzniká ak sa dotknú dva herné objekty a aspoň jeden z nich ma **collider** typu **trigger**. Trigger vpodstate znamená, že cez herný objekt sa dá prechádzať a pri prechode sa aktivuje spomenutá udalosť. 
 
-<img src="Images/Trigger.PNG?raw=true" alt="Error" width="25%"/>
+<img src="Images/Trigger.PNG?raw=true" alt="Error" width="30%"/>
 
 >**_Component Collider2D:_** Ak do hernej scény vložíme ľubovolný obrázok kameňa, slnka, hocičoho, nemôžeme čakať, že Unity bude samo od seba vedieť či ide o pevný objekt alebo len o grafiku, ktorá vypĺňa pozadie. Aby sme vedeli pevné objekty odlíšiť musíme objektu pridať *Collider2D*. Tento komponent vie mať rôzne tvary, ktoré nám pomáhaju približne ohraničiť herný objekt. Najčastejšie nám však stačí tvar krabice(BoxCollider2D), lebo je efektívny pre náš processor. V tomto projekte su collideri pridané za teba, však vo vlastnej hre si ich musíš popridávať sám. 
     
 Udalosť **On Trigger Enter 2D** nám na výstupnom bode ponúka informáciu o tom, aký objekt narazil do kľuča. My sa chceme spýtať, či sa objekt, ktorý do nás narazil volá Player. Na identifikáciu sa v Unity nezvykne používať meno objektu, ale existuje niečo ako **tag**. Totiž dva objekty nemôžu mať rovnaké meno, môžu však byť označené jedným tágom. Ak by sme sa pozreli na hráčov objekt tak jeho tag vidíme tu:
 
-<img src="Images/tag.PNG?raw=true" alt="Error" width="25%"/>
+<img src="Images/tag.PNG?raw=true" alt="Error" width="30%"/>
   
 Keď spojíme všetky tieto znalosti a doplníme ešte príkaz pre zničenie objektu, tak vieme vytvoriť následovný skript pre kľuč:
   
@@ -135,7 +135,7 @@ Kolíziu coinu a hráča vyriešime podobne ako kľúč. Ak ľubovolny objekt na
   
 Aby sme vedeli coiny ukladať a zobrazovať hráčovi potrebujeme dve premenné. Prvá bude **coinTxt** a bude typu Text. **Text** je objekt ktorý nám umoňuje zobrazovať texty na hernú obrazovku. Druhá premenná bude **coins** a bude typu **Integer**. Špecialitou tejto premennej je to, že ju spravvíme ako **Scene Variable**. Takýmto spôosobom ju budu vedieť zdieľať všetky objekty v danom levely. My ju potrebujeme, aby sme ju mohli zdielať pre každý coin.
   
-<img src="Images/c2.gif?raw=true" alt="Error" width="25%"/>
+<img src="Images/c2.gif?raw=true" alt="Error" width="30%"/>
   
 Teraz musíme priradiť Text vytvorený v našej scéne do premennej **coinTxt**. Daný text nájdeš ak si rozklikneš objekt Canvas. **Canvas** sa v Unity používa vždy keď chceme zobraziť tlačidlá, texty, ikonky a podobne. Jeho výhoda je okrem iného, že sa vie prispôsobiť veľkosti hernej obrazovky, ale aj, že počas pohybu hráča zostávajú zobrazené texty nehybné.
   
@@ -163,10 +163,21 @@ Ak všetko spravíš správne, tak máme hotovo a vieme zbierať mince. :)
 ## Pasca <a name="trap"></a> <img align="left" alt="hemisfera.sk" width="32px" src="Images/trap.png?raw=true" />
 Zatiaľ pre hráče v hre neexistuje žiadna hrozba a to je na čase zmeniť. Poďme si vytvoriť pascu, ktorá sa striedavo aktivuje a deaktivuje v časovom intervale. Nájdi si **trap prefab**, otvor ho, pridaj mu Script Machine component a môžeme editovať. 
   
-Ako prvé spravíme animáciu. O animácie sa v Unity stará component s názvom **Animator**. My už ho máme v pasci pridaný a nastavili sme mu aj animácie. Tvojou úlohou je iba prepínať animáciu pomocou premennej **isActive**, ktorú som ja ako tvorca návodu vytvoril v animátore. Ak je premmená **isActive** typu **bool** nastavená na hodnotu *True*, tak sa zapne animácia **TrapOn**, naopak ak je hodnota premennej *False* tak pasca sa sa prepne do **TrapOff**.
+Ako prvé spravíme animáciu. O animácie sa v Unity stará component s názvom **Animator**. My už ho máme v pasci pridaný a nastavili sme mu aj jednotlivé animácie. Tvojou úlohou je iba prepínať animácie pomocou premennej **isActive**, ktorú som ja ako tvorca návodu vytvoril v animátore. Ak je premmená **isActive** typu **bool** nastavená na hodnotu *True*, tak sa zapne animácia **TrapOn**, naopak ak je hodnota premennej *False* tak pasca sa sa prepne do **TrapOff**.
   
 <img src="Images/t0.PNG?raw=true" alt="Error" width="80%"/>
 
->**_Component Animator:_** funguje ako správca všetkých animácii, ktoré vytvoríme pre daný herný objekt. Ide o podobný typ grafu ako používame pri Visual scriptingu. Todo...
+>**_Component Animator:_** funguje ako správca všetkých animácii, ktoré vytvoríme pre daný herný objekt. Ide o podobný typ grafu ako používame pri Visual scriptingu, akurat miesto príkazov hovoríme o **stavoch**. V Každom stave je herný objekt v nejakej animácii. Šípky medzi stavmi sú prechody a je v nich definované, že kedy sa ma animácia zmeniť a aké su možnosti. Ak si rozklikneš šípky v našom animátore uvidíš že je na nich podmienka s premennou **isActive**.
+
+Prepínanie animácie chceme robiť napríklad každé 3 sekundy. Preto si chceme vedieť v Unity sledovať, že kedy tie 3 sekundy prešli. Najjednoduchší spôsob je vytvoriť si pomocnú premennú **timePassed** typu *float* a čas si budeme ukladať do nej.  
+    
+    
+<img src="Images/tp.PNG?raw=true" alt="Error" width="30%"/>
+  
+Ak používame funkciu **On Update** tak na počítanie prejdeného času môžeme použiť príkaz **Time Get Delta Time**. Ten nám vráti čas od posledného vykonania všetkých príkazov v **On Update**. Ten sa vykonáva zvyčajne od 60 do 120 krát za sekundu. Záleži aký máme výkonný počítač. Cele počítanie času vyzerá takto:
+  
+<img src="Images/t1.PNG?raw=true" alt="Error" width="80%"/>
+  
+
 
 Ak stihnes spravit vsetko co je zatial pridane, tak si pozri [Animacie](https://www.youtube.com/watch?v=hkaysu1Z-N), skus spravit sam pascu ktora striela sipy jednym smerom v nejakom intervale alebo pomoz svojim spoluziakom.
