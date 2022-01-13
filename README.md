@@ -178,6 +178,8 @@ Ak používame funkciu **On Update** tak na počítanie prejdeného času môže
   
 <img src="Images/t1.PNG?raw=true" alt="Error" width="80%"/>
   
-
-
+Teraz môžeme pomocou príkazov **greater** a **if** kontrolovať či už prešlo viac ako 3 sekundy. Ak prešli, tak zmeníme animáciu a zresetujeme napočítanú hodnotu v **timePassed** na 0. 
+   
+ <img src="Images/t2.PNG?raw=true" alt="Error" width="80%"/>
+  
 Ak stihnes spravit vsetko co je zatial pridane, tak si pozri [Animacie](https://www.youtube.com/watch?v=hkaysu1Z-N), skus spravit sam pascu ktora striela sipy jednym smerom v nejakom intervale alebo pomoz svojim spoluziakom.
