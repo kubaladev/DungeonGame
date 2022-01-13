@@ -173,4 +173,11 @@ Prepínanie animácie chceme robiť napríklad každé 3 sekundy. Preto si chcem
     
     
 <img src="Images/tp.PNG?raw=true" alt="Error" width="30%"/>
+  
+Ak používame funkciu **On Update** tak na počítanie prejdeného času môžeme použiť príkaz **Time Get Delta Time**. Ten nám vráti čas od posledného vykonania všetkých príkazov v **On Update**. Ten sa vykonáva zvyčajne od 60 do 120 krát za sekundu. Záleži aký máme výkonný počítač. Cele počítanie času vyzerá takto:
+  
+<img src="Images/t1.PNG?raw=true" alt="Error" width="80%"/>
+  
+
+
 Ak stihnes spravit vsetko co je zatial pridane, tak si pozri [Animacie](https://www.youtube.com/watch?v=hkaysu1Z-N), skus spravit sam pascu ktora striela sipy jednym smerom v nejakom intervale alebo pomoz svojim spoluziakom.
