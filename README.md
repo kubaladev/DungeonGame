@@ -182,4 +182,4 @@ Teraz môžeme pomocou príkazov **greater** a **if** kontrolovať či už preš
    
  <img src="Images/t2.PNG?raw=true" alt="Error" width="80%"/>
   
-Ak stihnes spravit vsetko co je zatial pridane, tak si pozri [Animacie](https://www.youtube.com/watch?v=hkaysu1Z-N), skus spravit sam pascu ktora striela sipy jednym smerom v nejakom intervale alebo pomoz svojim spoluziakom.
+Zvyšok návodu je ešte v procese výroby. Ak už máš všetko hotové tak skus do hráča pridať podmienku aby ho kontakt s pascou zabil. Rada: použi on Trigger enter 2D. Ak nastane kontakt tak znovu načítaj level. Prípadne skus spraviť aby nefungovali všetky pasce naraz, ale každá mala svoj vlasný počiatočný čas a maximálny čas.
