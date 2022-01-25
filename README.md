@@ -192,8 +192,16 @@ Otvor hráčov skript a pridajme novu udalosť **On Trigger Enter 2D**.
 2. Pridáme podmienku **if** aby sme program rozdelili na vetvu kedy hráč do nepriateľa narazil a vetvu kedy nenarazil. 
 3. Vo vetve **True** reštartujeme scénu pomocou **Scene Managera** a príkazu **Load Scene**. 
 4. Ako vstup do príkazu **Load Scene** vložíme meno aktívnej scény, teda levelu v ktorom sa hráč aktúalne nachádza. Takto zariadíme reštart správnej sceny. Použijeme príkazy **Get Active scene** a **Get Name**.
-     
+5. Otestujeme, či všetko správne funguje a máme hotovo!
+
+### Výsledný skript:  
+Doplnok do **player** scriptu:
+  
 <img src="Images/t4.PNG?raw=true" alt="Error" width="80%"/>
+  
+Pasca:
+<img src="Images/t3.PNG?raw=true" alt="Error" width="80%"/>
+
 
 No ale ako spraviť aby pasca zabila hráča, keď je aktivovaná a nezabila, keď aktivovaná nie je?
 Zvyšok návodu je ešte v procese výroby. Ak už máš všetko hotové tak skus do hráča pridať podmienku aby ho kontakt s pascou zabil. Rada: použi on Trigger enter 2D. Ak nastane kontakt tak znovu načítaj level. Prípadne skus spraviť aby nefungovali všetky pasce naraz, ale každá mala svoj vlasný počiatočný čas a maximálny čas.
