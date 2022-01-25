@@ -199,8 +199,9 @@ Doplnok do **player** scriptu:
   
 <img src="Images/t4.PNG?raw=true" alt="Error" width="80%"/>
   
-Pasca:
-<img src="Images/t3.PNG?raw=true" alt="Error" width="80%"/>
+Pasca: 
+  
+<img src="Images/t2.PNG?raw=true" alt="Error" width="80%"/>
 
 
 No ale ako spraviť aby pasca zabila hráča, keď je aktivovaná a nezabila, keď aktivovaná nie je?
