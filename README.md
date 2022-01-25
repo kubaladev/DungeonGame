@@ -193,6 +193,10 @@ Otvor hráčov skript a pridajme novu udalosť **On Trigger Enter 2D**.
 3. Vo vetve **True** reštartujeme scénu pomocou **Scene Managera** a príkazu **Load Scene**. 
 4. Ako vstup do príkazu **Load Scene** vložíme meno aktívnej scény, teda levelu v ktorom sa hráč aktúalne nachádza. Takto zariadíme reštart správnej sceny. Použijeme príkazy **Get Active scene** a **Get Name**.
 5. Otestujeme, či všetko správne funguje a máme hotovo!
+  
+Ak si všimneš tak pasca hráča zabije iba keď je aktivovaná, pritom mi sme nič takéto neprogramovali. Pointa je v tom, že v samotnej animácii sme nastavili collider tak aby pri obrázku bez ostňov bol collider pasce vypnutý a v obrázku s ostňami zapnutý. Týmto spôsobom sme ti zjedodušili tvoj kód. 
+
+>**_Component Scene Manager:_** slúži v Unity na prepínanie sa medzi scénami. Najčastejšie ho budeš využívať iba na získanie informácii o aktívnej scéne alebo na prepínanie sa medzi scénami.
 
 ### Výsledný skript:  
 Doplnok do **player** scriptu:
@@ -203,6 +207,4 @@ Samotný kód pre **pascu**:
   
 <img src="Images/t2.PNG?raw=true" alt="Error" width="80%"/>
 
-
-No ale ako spraviť aby pasca zabila hráča, keď je aktivovaná a nezabila, keď aktivovaná nie je?
 Zvyšok návodu je ešte v procese výroby. Ak už máš všetko hotové tak skus do hráča pridať podmienku aby ho kontakt s pascou zabil. Rada: použi on Trigger enter 2D. Ak nastane kontakt tak znovu načítaj level. Prípadne skus spraviť aby nefungovali všetky pasce naraz, ale každá mala svoj vlasný počiatočný čas a maximálny čas.
