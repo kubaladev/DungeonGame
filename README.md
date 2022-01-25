@@ -180,6 +180,14 @@ Ak používame funkciu **On Update** tak na počítanie prejdeného času môže
   
 Teraz môžeme pomocou príkazov **greater** a **if** kontrolovať či už prešlo viac ako 3 sekundy. Ak prešli, tak zmeníme animáciu a zresetujeme napočítanú hodnotu v **timePassed** na 0. 
    
- <img src="Images/t2.PNG?raw=true" alt="Error" width="80%"/>
+<img src="Images/t2.PNG?raw=true" alt="Error" width="80%"/>
+     
+Túto sa skript pre pascu končí. Ostáva však spraviť **kolíziu hráča s pascou** a **hráčovu smrť**. Túto časť by sme vedeli spraviť tiež ako súčasť skriptu pre pascu, ale ak použijeme vhodný tag("Enemy") a naprogramujeme to do hráčového skriptu, tak bude vedieť hráča zabiť akýkoľvek herný objekt s týmto označením. Automaticky keď potom spravíme pohybujúceho sa nepriateľa, tak zabije hráča pri dotyku. Vytvor a nastav teda pasci tag Enemy ak ho už nema nastavený.
+
+<img src="Images/t3.PNG?raw=true" alt="Error" width="30%"/>
+
   
+Otvor hráčov skript a pridajme novu udalosť **On Trigger Enter 2D**. 
+
+No ale ako spraviť aby pasca zabila hráča, keď je aktivovaná a nezabila, keď aktivovaná nie je?
 Zvyšok návodu je ešte v procese výroby. Ak už máš všetko hotové tak skus do hráča pridať podmienku aby ho kontakt s pascou zabil. Rada: použi on Trigger enter 2D. Ak nastane kontakt tak znovu načítaj level. Prípadne skus spraviť aby nefungovali všetky pasce naraz, ale každá mala svoj vlasný počiatočný čas a maximálny čas.
