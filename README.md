@@ -199,7 +199,7 @@ Doplnok do **player** scriptu:
   
 <img src="Images/t4.PNG?raw=true" alt="Error" width="80%"/>
   
-Pasca: 
+Samotný kód pre **pascu**: 
   
 <img src="Images/t2.PNG?raw=true" alt="Error" width="80%"/>
 
