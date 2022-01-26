@@ -123,7 +123,7 @@ Správne priradenie si otestuj a ak si nikde nesparavil chybu tak kľuč máš h
 <img src="Images/k4.PNG?raw=true" alt="Error" width="80%"/>
   
 >**_Tip 5: Warning:_** príkaz **Game Object Destroy** je žltou farbou označený preto, že ide o varovanie. Varovanie neznamená, že ide nutne o chybu, ale že si máme dať pozor, lebo by chyba mohla nastať. Varuje nás preto, lebo hodnota premennej *dvere* **nie je definovaná**. Ak by sme v editore nepriradili ku každému kľuču jeho dvere, tak by nám Script Machine pre daný kľúč ohlásíl chybu a nastal by v hre **bug**(slovíčko pre nežiadané alebo chybné správanie).
-## Coin <a name="coin"></a> <img align="left" alt="hemisfera.sk" width="32px" src="https://github.com/Zuvix/DungeonGame/blob/main/Images/coin.png?raw=true" />
+## Coin <a name="coin"></a> <img align="left" alt="" width="32px" src="https://github.com/Zuvix/DungeonGame/blob/main/Images/coin.png?raw=true" />
 
 Našou ďaľšou úlohou je spraviť si zberateľný coin. Coin bude predstavovať hráčové skóre a jeho cieľom bude nie len prejsť level, ale aj pozbierať čo najviac mincí. Aby sme začali, tak nájdi si coin prefab v priečinku Prefabs. Otvor ho a podobne, ako v predchádzajúcich prípadoch ho edituj. Vytvor **Script Machine** komponent a nový graf s názvom **coin**.
   
@@ -207,4 +207,12 @@ Samotný kód pre **pascu**:
   
 <img src="Images/t2.PNG?raw=true" alt="Error" width="80%"/>
 
-Zvyšok návodu je ešte v procese výroby. Ak už máš všetko hotové tak skus do hráča pridať podmienku aby ho kontakt s pascou zabil. Rada: použi on Trigger enter 2D. Ak nastane kontakt tak znovu načítaj level. Prípadne skus spraviť aby nefungovali všetky pasce naraz, ale každá mala svoj vlasný počiatočný čas a maximálny čas.
+## Enemy <a name="enemy"></a> <img align="left" alt="" width="32px" src="Images/enemy.png?raw=true" />
+  
+<img src="Images/e0.PNG?raw=true" alt="Error" width="80%"/>
+  
+<img src="Images/e1.PNG?raw=true" alt="Error" width="80%"/>
+  
+<img src="Images/e2.PNG?raw=true" alt="Error" width="80%"/>
+  
+<img src="Images/e3.PNG?raw=true" alt="Error" width="80%"/>
