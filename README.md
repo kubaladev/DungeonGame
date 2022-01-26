@@ -209,7 +209,7 @@ Samotný kód pre **pascu**:
 
 ## Enemy <a name="enemy"></a> <img align="left" alt="" width="32px" src="Images/enemy.png?raw=true" />
   
-<img src="Images/e0.PNG?raw=true" alt="Error" width="80%"/>
+<img src="Images/e0.PNG?raw=true" alt="Error" width="30%"/>
   
 <img src="Images/e1.PNG?raw=true" alt="Error" width="80%"/>
   
