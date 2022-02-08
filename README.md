@@ -47,7 +47,7 @@ Ako prvé musíme detekovať, kedy hráč stlačil klávesy na pohyb postavy. Na
 
 >**_Príkaz: Vector3 Create_** nám vytvorí Vektor, ktorí hovorí o **smere a veľkosti** posunu pre ľubovolný herný objekt. Používať ho budeme vždy keď budeme chcieť hýbať objektami. 
   
-Výsledok príkazov si uložíme do nového **Vectoru3**(alebo Vectoru2, aj ten by fungoval správne, keďže robíme 2D hru).
+Výsledok príkazov si uložíme do nového **Vector3**(alebo Vector2, aj ten by fungoval správne, keďže robíme 2D hru).
 
 <img src="Images/p1.gif?raw=true" alt="Error" width="80%"/>
 
